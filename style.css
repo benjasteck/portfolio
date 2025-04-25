@@ -646,7 +646,11 @@ nav .fa-solid{
 
 }
 
-
+.error-msg {
+    color: red;
+    font-size: 0.9rem;
+    margin: 4px 0;
+  }
 
 .kort:hover .kortLayer, .kort:focus-within .kortLayer{
     transform: translateY(0);
