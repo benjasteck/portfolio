@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6cff64fb2c.js" crossorigin="anonymous"></script>
+    <script defer src="hideShow.js"> </script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+<div id="header">
+<div class="container">
+    <nav>
+        <img src="images/logo.png" class="logo">
+
+        <ul id="sidemenu">
+            <li><a href="#header" id="headerHome">{{texts.headerHome}}</a> </li>
+            <li><a href="#about" id="headerAbout">{{texts.headerAbout}}</a> </li>
+            <li><a href="#services" id="headerPortfolio">{{texts.headerPortfolio}}</a> </li>
+            <li><a href="#portfolio" id="headerProject">{{texts.headerProj}}</a> </li>
+            <li><a href="#contact" id="headerContact">{{texts.headerContact}}</a> </li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            <lan id="language">
+
+                <a href="#" language='English' class="active"@click="setLanguage('en')"><img src="images/flag-united-kingdom-emoji-2048x1279-po023g13.png"></a>
+                <a href="#" language='Danish' @click="setLanguage('da')"><img src="images/flag-denmark-emoji-2048x1279-r54we2pz.png"></a>
+
+            </lan>
+        </ul>
+
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <div class="header-text">
+        <p class="headerTitle">{{texts.headerTitle}}</p>
+        <h1 id="headerDesc" v-html="texts.headerDesc">{{texts.headerDesc}}</h1>
+    </div>
+</div>
+</div>
+
+
+
+<div id="about">
+<div class="container">
+<div class="row">
+    <div class="about-col-1">
+        <img src="images/migselv.png" class="hidden">
+    </div>
+    <div class="about-col-2 hidden2">
+        <h1 class="subtitle" id="aboutTitle">{{texts.aboutTitle}}</h1>
+        <p class="aboutDesc" id="aboutDesc">{{texts.aboutDesc}}</p>
+
+        <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')" id="skillHeader">{{texts.skillHeader}}</p>
+            <p class="tab-links" onclick="opentab('experience')" id="expHeader">{{texts.expHeader}}</p>
+            <p class="tab-links" onclick="opentab('education')" id="eduHeader" >{{texts.eduHeader}}</p>
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+            <ul>
+                <li id="skillsText" v-html="texts.skillsText">{{texts.skillsText}}</li>
+                <li id="expText" v-html="texts.expText">{{texts.expText}}</li>
+                <li id="eduText" v-html="texts.eduText">{{texts.eduText}}</li>
+            </ul>
+        </div>
+        <div class="tab-contents" id="experience">
+            <ul>
+                <li id="xp23" v-html="texts.xp23">{{texts.xp23}}</li>
+                <li id="xp19" v-html="texts.xp19">{{texts.xp19}}</li>
+                <li id="xp18" v-html="texts.xp18">{{texts.xp18}}</li>
+                <li id="xp13" v-html="texts.xp13">{{texts.xp13}}</li>
+            </ul>
+        </div>
+        <div class="tab-contents" id="education">
+            <ul>
+                <li id="edu21" v-html="texts.edu21">{{texts.edu21}}</li>
+                <li id="edu17" v-html="texts.edu17">{{texts.edu17}}</li>
+                <li id="edu07" v-html="texts.edu07">{{texts.edu07}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+<div id="services">
+    <div class="container">
+        <h1 class="subtitle" id="portTitle">{{texts.portTitle}}</h1>
+        <div class="services-list" >
+            <div class="services hidden">
+                <i class="fa-solid fa-code"></i>
+                <h2>Java/FXML</h2>
+                <p id="portJava">{{texts.portJava}}</p>
+                <a href="java.html" id="portBtn">{{texts.portBtn}}</a>
+            </div>
+            <div class="services hidden">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h2>C#/HTML</h2>
+                <p id="portHTML">{{texts.portHTML}}</p>
+                <a href="csharp.html" id="portBtn2">{{texts.portBtn}}</a>
+            </div>
+            <div class="services hidden"> 
+                <i class="fa-solid fa-photo-film"></i>
+            <h2>PhotoShop and Illustrator</h2>
+            <p id="port3D">{{texts.port3D}}</p>
+            <a href="Adobe.html" id="portBtn3">{{texts.portBtn}}</a>
+        </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.querySelectorAll('.services-list .services').forEach((el, i) => {
+    el.style.transitionDelay = `${i * 200}ms`;
+});
+</script>
+
+
+<div id="portfolio" class="hidden">
+    <div class="container">
+        <h1 class="subtitle" id="proTitle">{{texts.proTitle}}</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/netflix.png">
+                <div class="layer">
+                    <h3 id="netflixTitle">{{texts.netflixTitle}}</h3>
+                    <p id="netflixDesc">{{texts.netflixDesc}}</p>
+                    <a href="netflix.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/htmlcard2.PNG">
+                <div class="layer">
+                    <h3 id="mapTitle">{{texts.mapTitle}}</h3>
+                    <p id="mapDesc">{{texts.mapDesc}}
+                    </p>
+                    <a href="map.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/Photography.PNG">
+                <div class="layer">
+                    <h3 id="horTitle">{{texts.horTitle}}</h3>
+                    <p id="horDesc">{{texts.horDesc}}
+                    </p>
+                    <a href="PHOTO.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn" id="proBtn">{{texts.proBtn}}</a>
+    </div>
+</div>
+
+
+
+<div id="contact" >
+    <div class="container">
+        <div class="row">
+            <div class="contact-left hidden">
+                <h1 class="subtitle" id="conTitle">{{texts.conTitle}}</h1>
+                <p><i class="fa-solid fa-paper-plane" ></i>bejasteckmetz@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>22889242</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <a href="images/CV.mp4" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right hidden2">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required id="nameText">
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">{{texts.conBtn}}</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+         tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+    const {createApp} = Vue
+
+    createApp({
+    data() {
+      return {
+        currentLang: 'en',
+        langs: {
+          en: {
+            
+            headerHome: "Home",
+            headerAbout: "About",
+            headerPortfolio: "Portfolio",
+            headerProj: "Projects",
+            headerContact: "Contact",
+            headerTitle: "Multimedia Designer",
+            headerDesc: "Hi, I'm <span>Benjamin</span> currently pursuing<br> a degree in Multimedia Design in Denmark.<br> This is my personal portfolio",
+            aboutTitle: "About Me",
+            aboutDesc: "Hello, I'm Benjamin, i study Multimedia Design in Denmark and I have ambitious plans to pursue a web development course ontop. My work is characterized by a strong ethic, and I take pride in approaching tasks with thoroughness and dedication. I have been engaged in employment since the age of 13, and I even took a full year off between high school and college to gain valuable full-time work experience. Please don't hesitate to reach out to me using the contact application I've provided at the bottom of this page. Kind regards, Benjamin.",
+            skillHeader: "Skills",
+            expHeader: "Experience",
+            eduHeader: "Education",
+            skillsText: "<span>Back-End Development</span><br>I possess proficiency in Java, SQL and C#, and I have recently commenced utilizing Python as well.",
+            expText: "<span>Front-End Development</span><br>I am proficient in coding with CSS and FXML, and HTML as well as javascript/typescript. Additionally, I engage in design and UX principles",
+            eduText: "<span>Adobe</span><br>I have been working with Adobe programs such as photoshop, aftereffects, illustrator, premiere etc. and hold a solid grasp of its contents",
+            xp23: "<span>2023 - </span><br>Employed part-time within a warehouse operation that encompasses order preparation and delivery. I assume occasional responsibilities for order management and staff supervision. At this time i was also studying for a computer science degree, however as we got to go through a year of fullstack work i discovered my passion lied within design and frontend work.",
+            xp19: "<span>2019 - 2021</span><br>Was employed full-time as a Sales Assistant at a supermarket, where my responsibilities included customer care, warehouse work, and various other tasks.",
+            xp18: "<span>2018 - 2019</span><br>I held the position of Sales Assistant and Closing Manager at a supermarket. My role encompassed overseeing the supermarket's operations, managing the staff,<br>and ensuring the smooth closing of the store at the end of each day, in addition to performing daily job tasks.",
+            xp13: "<span>2013 - 2018</span><br>Prior to 2019, I gained experience working with various employers, including roles at a restaurant, as a babysitter, and at a logistics firm. However, I recognize that these experiences may not be relevant, which is why they won't be explained in detail.",
+            edu21: "<span>2024 - </span><br>Multimedia design degree at EASV in Esbjerg Denmark.",
+            edu17: "<span>2017 - 2020</span><br>Gymnasium degree, with The Higher Technical Examination Programme(HTX) being my chosen variant.",
+            edu07: "<span>2008-2017</span><br>Primary School.",
+            portTitle: "My Portfolio",
+            portJava: "I have plenty experience working with Java, FXML and SQL. I have successfully completed numerous projects, several of which are available for viewing through the following link.",
+            portHTML: "I've been coding websites using HTML, CSS, JavaScript/typescript, and C#. As a result, I have a number of projects at this time. You can view some of these projects by clicking on the link below.",
+            port3D: "In my ambition to be a website developer, ive aquired skills in multiple of Adobes programs, such as Illustrator, Photoshop and After Effects. To this end ive completed multiple images,logos and videos for future reference and knowledge",
+            portBtn: "Learn more",
+            proTitle: "Ongoing And Future Projects",
+            netflixTitle: "Online Netflix Clone",
+            netflixDesc: "A chatting website aimed at improving my skills with API and sending data. It is similar to many chatting sites with the exception of not using a database for anything but the users. Futhermore it is also to improve my skills on using jS to manipulate html components as i want the site to be highly customizeable.",
+            mapTitle: "Chatsy",
+            mapDesc: "This strategic choice is driven by my desire to attain a high level of proficiency in effectively utilizing API keys and mastering the intricacies of their operation. Such expertise is increasingly valuable in today's digital landscape and aligns with my commitment to delivering robust and innovative web solutions.",
+            horTitle: "Client Work",
+            horDesc: "Ive recently begun working freelance for clients. currently im working on a website for a start-up photographer. Mostly a simple but expensive website with a lot of attention to design. Its my first proper professional work, with communication and meetings with clients.",
+            proBtn: "See more",
+            conTitle: "Contact",
+            conBtn: "Submit"
+            
+
+
+            // Add all the other keys from your original setEnglish function
+          },
+          da: {
+            headerHome: "Hjem",
+            headerAbout: "Om mig",
+            headerPortfolio: "Portefølje",
+            headerProj: "Projekter",
+            headerContact: "Kontakt",
+            headerTitle: "Multimedia Designer",
+            headerDesc: "Hej, jeg hedder <span>Benjamin</span> og jeg<br>er i gang med at tage en grad i Multimedie Design,<br> i Danmark. Dette er mit personlige portefølje.",
+            aboutTitle: "Om Mig",
+            aboutDesc: "Hej, jeg hedder Benjamin, og jeg studerer Multimediedesign i Danmark. Jeg har ambitiøse planer om at tage et webudviklingskursus som supplement. Mit arbejde kendetegnes af en stærk arbejdsmoral, og jeg er stolt af at tilgå opgaver med grundighed og dedikation. Jeg har været i arbejde siden jeg var 13 år, og jeg tog endda to år fri mellem gymnasiet og universitetet for at opnå værdifuld erfaring med fuldtidsarbejde. Tøv ikke med at kontakte mig via kontaktformularen, som jeg har inkluderet nederst på denne side. Med venlig hilsen, Benjamin.",
+            skillHeader: "Skills",
+            expHeader: "Erfaring",
+            eduHeader: "Uddannelse",
+            skillsText: "<span>Back-End Development</span><br>Jeg besidder kompetencer inden for Java og SQL, og for nylig er jeg begyndt at anvende Python og C# i mine professionelle bestræbelser.",
+            expText: "<span>Front-End Development</span><br>Jeg er dygtig til at kode med CSS og FXML, samt HTML og JavaScript/TypeScript. Derudover arbejder jeg med design og UX-principper.",
+            eduText: "<span>Adobe</span><br>Jeg har arbejdet med Adobe-programmer som Photoshop, After Effects, Illustrator, Premiere osv., og jeg har et solidt kendskab til deres indhold.",
+            xp23: "<span>2023 - </span><br>Jeg har arbejdet deltid i en lagerdrift, der omfatter ordreforberedelse og levering. Jeg påtager mig lejlighedsvis ansvar for ordrehåndtering og personaleledelse. På samme tid studerede jeg til en datalogiuddannelse, men da vi gennemgik et år med fullstack-arbejde, opdagede jeg, at min passion lå inden for design og frontend-arbejde.",
+            xp19: "<span>2019 - 2021</span><br>Var ansat på fuldtid som Salgsassistent i et supermarked, hvor mine ansvarsområder omfattede kundeservice, lagerarbejde og forskellige andre opgaver.",
+            xp18: "<span>2018 - 2019</span><br>Jeg havde stillingen som Salgsassistent og Lukningsansvarlig i et supermarked. Min rolle omfattede tilsyn med supermarkedets drift, personaleledelse samt sikring af problemfri lukning af butikken ved hver dags afslutning, udover udførelse af daglige arbejdsopgaver.",
+            xp13: "<span>2013 - 2018</span><br>Før 2018 opnåede jeg erfaring ved at arbejde for forskellige arbejdsgivere, herunder i roller på en restaurant, som babysitter og kontorarbejde i en logistikvirksomhed. Jeg erkender dog, at disse erfaringer muligvis ikke er relevante, hvilket er grunden til at de ikke vil blive uddybet nærmere.",
+            edu21: "<span>2024 - </span><br>Multimedie Design grad ved EASV i Esbjerg, Danamrk",
+            edu17: "<span>2017 - 2020</span><br>Gymnasiel uddannelse ved højere teknisk eksamen(HTX).",
+            edu07: "<span>2008-2017</span><br> Folkeskole",
+            portTitle: "Mit Portefølje",
+            portJava: "Jeg har masser af erfaring med at arbejde med Java, FXML og SQL. Jeg har med succes gennemført adskillige projekter, hvoraf flere er tilgængelige for visning via følgende link.",
+            portHTML: "Jeg har kodet hjemmesider ved hjælp af HTML, CSS, JavaScript/TypeScript og C#. Som resultat har jeg flere projekter på nuværende tidspunkt. Du kan se nogle af disse projekter ved at klikke på linket nedenfor.",
+            port3D: "I min ambition om at blive webudvikler har jeg opnået færdigheder i flere af Adobes programmer, såsom Illustrator, Photoshop og After Effects. I den forbindelse har jeg lavet adskillige billeder, logoer og videoer som fremtidig reference og viden.",
+            portBtn: "Lær Mere",
+            proTitle: "Løbende og fremtidige projekter",
+            netflixTitle: "Online Netflix Klon",
+            netflixDesc: "Dette projekt har primært til formål at forbedre mine færdigheder i HTML og CSS med et specifikt fokus på brugergrænsefladedesign. Derudover er et centralt mål med dette projekt at fremme min dygtighed i at etablere effektiv kommunikation mellem hjemmesiden og dens databasebackend, en kritisk færdighed i moderne webudvikling.",
+            mapTitle: "Chatsy",
+            mapDesc: "Et chatwebsite, der har til formål at forbedre mine færdigheder med API'er og dataoverførsel. Det ligner mange chat-sites, med undtagelse af, at det kun bruger en database til brugerne. Derudover er det også for at forbedre mine færdigheder i at bruge JavaScript til at manipulere HTML-komponenter, da jeg ønsker, at siden skal være meget tilpasningsbar.",
+            horTitle: "Klient Arbejde",
+            horDesc: "Jeg er for nylig begyndt at arbejde som freelancer for kunder. Jeg arbejder i øjeblikket på en hjemmeside for en start-up fotograf. Det er primært en simpel, men dyr hjemmeside med stort fokus på design. Det er mit første rigtige professionelle arbejde, hvor jeg er i løbende kommunikation og møder med kunder.",
+            proBtn: "Se mere",
+            conTitle: "kontakt",
+            conBtn: "Submit"
+          }
+        }
+      }
+    },
+    computed: {
+      texts() {
+        return this.langs[this.currentLang]
+      }
+    },
+    methods: {
+      setLanguage(lang) {
+        this.currentLang = lang
+      }
+    }
+  }).mount('#app')
+
+    function setDanish(){
+
+        document.getElementById("headerDesc").innerHTML="Hej, jeg hedder <span>Benjamin</span> og jeg<br>er i gang med at tage en grad i Multimedie Design,<br> i Danmark. Dette er mit personlige portefølje.";
+        document.getElementById("headerHome").innerHTML="Hjem"
+            document.getElementById("headerAbout").innerHTML="Om mig"
+                document.getElementById("headerPortfolio").innerHTML="Portefølje"
+                    document.getElementById("headerProject").innerHTML="Projekter"
+                        document.getElementById("headerContact").innerHTML="Kontakt"
+        document.getElementById("aboutTitle").innerHTML="Om Mig"
+            document.getElementById("aboutDesc").innerHTML="Hej, jeg hedder Benjamin, og jeg studerer Multimediedesign i Danmark. Jeg har ambitiøse planer om at tage et webudviklingskursus som supplement. Mit arbejde kendetegnes af en stærk arbejdsmoral, og jeg er stolt af at tilgå opgaver med grundighed og dedikation. Jeg har været i arbejde siden jeg var 13 år, og jeg tog endda to år fri mellem gymnasiet og universitetet for at opnå værdifuld erfaring med fuldtidsarbejde. Tøv ikke med at kontakte mig via kontaktformularen, som jeg har inkluderet nederst på denne side. Med venlig hilsen, Benjamin."
+                document.getElementById("skillHeader").innerHTML="Færdigheder"
+                    document.getElementById("expHeader").innerHTML="Erfaring"
+                        document.getElementById("eduHeader").innerHTML="Uddannelse"
+                            document.getElementById("skillsText").innerHTML="<span>Back-End Development</span><br>Jeg besidder kompetencer inden for Java og SQL, og for nylig er jeg begyndt at anvende Python og C# i mine professionelle bestræbelser."
+                                 document.getElementById("expText").innerHTML="<span>Front-End Development</span><br>Jeg er dygtig til at kode med CSS og FXML, samt HTML og JavaScript/TypeScript. Derudover arbejder jeg med design og UX-principper."
+                                    document.getElementById("eduText").innerHTML="<span>Adobe</span><br>Jeg har arbejdet med Adobe-programmer som Photoshop, After Effects, Illustrator, Premiere osv., og jeg har et solidt kendskab til deres indhold."
+                                        document.getElementById("xp23").innerHTML="<span>2023 - </span><br>Jeg har arbejdet deltid i en lagerdrift, der omfatter ordreforberedelse og levering. Jeg påtager mig lejlighedsvis ansvar for ordrehåndtering og personaleledelse. På samme tid studerede jeg til en datalogiuddannelse, men da vi gennemgik et år med fullstack-arbejde, opdagede jeg, at min passion lå inden for design og frontend-arbejde."
+                                             document.getElementById("xp19").innerHTML="<span>2019 - 2021</span><br>Var ansat på fuldtid som Salgsassistent i et supermarked, hvor mine ansvarsområder omfattede kundeservice, lagerarbejde og forskellige andre opgaver."
+                                                document.getElementById("xp18").innerHTML="<span>2018 - 2019</span><br>Jeg havde stillingen som Salgsassistent og Lukningsansvarlig i et supermarked. Min rolle omfattede tilsyn med supermarkedets drift, personaleledelse samt sikring af problemfri lukning af butikken ved hver dags afslutning, udover udførelse af daglige arbejdsopgaver."
+                                                    document.getElementById("xp13").innerHTML="<span>2013 - 2018</span><br>Før 2018 opnåede jeg erfaring ved at arbejde for forskellige arbejdsgivere, herunder i roller på en restaurant, som babysitter og kontorarbejde i en logistikvirksomhed. Jeg erkender dog, at disse erfaringer muligvis ikke er relevante, hvilket er grunden til at de ikke vil blive uddybet nærmere."
+                                                        document.getElementById("edu21").innerHTML="<span>2024 - </span><br>Multimedie Design grad ved EASV i Esbjerg, Danamrk"
+                                                            document.getElementById("edu17").innerHTML="<span>2017 - 2020</span><br>Gymnasiel uddannelse ved højere teknisk eksamen(HTX)."
+                                                                document.getElementById("edu07").innerHTML="<span>2008-2017</span><br> Folkeskole"
+        document.getElementById("portTitle").innerHTML="Mit Portefølje"
+            document.getElementById("portJava").innerHTML="Jeg har masser af erfaring med at arbejde med Java, FXML og SQL. Jeg har med succes gennemført adskillige projekter, hvoraf flere er tilgængelige for visning via følgende link."
+                document.getElementById("portBtn").innerHTML="Lær Mere"
+                    document.getElementById("portHTML").innerHTML="Jeg har kodet hjemmesider ved hjælp af HTML, CSS, JavaScript/TypeScript og C#. Som resultat har jeg flere projekter på nuværende tidspunkt. Du kan se nogle af disse projekter ved at klikke på linket nedenfor."
+                        document.getElementById("portBtn2").innerHTML="Lær Mere"
+                            document.getElementById("port3D").innerHTML="I min ambition om at blive webudvikler har jeg opnået færdigheder i flere af Adobes programmer, såsom Illustrator, Photoshop og After Effects. I den forbindelse har jeg lavet adskillige billeder, logoer og videoer som fremtidig reference og viden."
+                                document.getElementById("portBtn3").innerHTML="Lær Mere"
+        document.getElementById("proTitle").innerHTML="Løbende og fremtidige projekter"
+            document.getElementById("netflixTitle").innerHTML="Online Netflix Klon"
+                document.getElementById("netflixDesc").innerHTML="Dette projekt har primært til formål at forbedre mine færdigheder i HTML og CSS med et specifikt fokus på brugergrænsefladedesign. Derudover er et centralt mål med dette projekt at fremme min dygtighed i at etablere effektiv kommunikation mellem hjemmesiden og dens databasebackend, en kritisk færdighed i moderne webudvikling."
+                    document.getElementById("mapTitle").innerHTML="Chatsy"
+                        document.getElementById("mapDesc").innerHTML="Et chatwebsite, der har til formål at forbedre mine færdigheder med API'er og dataoverførsel. Det ligner mange chat-sites, med undtagelse af, at det kun bruger en database til brugerne. Derudover er det også for at forbedre mine færdigheder i at bruge JavaScript til at manipulere HTML-komponenter, da jeg ønsker, at siden skal være meget tilpasningsbar."
+                             document.getElementById("horTitle").innerHTML="Klient Arbejde"
+                                document.getElementById("horDesc").innerHTML="Jeg er for nylig begyndt at arbejde som freelancer for kunder. Jeg arbejder i øjeblikket på en hjemmeside for en start-up fotograf. Det er primært en simpel, men dyr hjemmeside med stort fokus på design. Det er mit første rigtige professionelle arbejde, hvor jeg er i løbende kommunikation og møder med kunder."
+                                    document.getElementById("proBtn").innerHTML="Se mere"
+        document.getElementById("conTitle").innerHTML="Kontakt"
+        document.getElementById("nameText").innerText
+
+
+
+
+
+
+    }
+
+    function setEnglish(){
+        document.getElementById("headerDesc").innerHTML="Hi, I'm <span>Benjamin</span> currently pursuing<br> a degree in Multimedia Design in Denmark.<br> This is my personal portfolio"
+        document.getElementById("headerHome").innerHTML="Home"
+            document.getElementById("headerAbout").innerHTML="About"
+                document.getElementById("headerPortfolio").innerHTML="Portfolio"
+                    document.getElementById("headerProject").innerHTML="Projects"
+                        document.getElementById("headerContact").innerHTML="Contact"
+        document.getElementById("aboutTitle").innerHTML="About Me"
+            document.getElementById("aboutDesc").innerHTML="Hello, I'm Benjamin, i study Multimedia Design in Denmark and I have ambitious plans to pursue a web development course ontop. My work is characterized by a strong ethic, and I take pride in approaching tasks with thoroughness and dedication. I have been engaged in employment since the age of 13, and I even took a full year off between high school and college to gain valuable full-time work experience. Please don't hesitate to reach out to me using the contact application I've provided at the bottom of this page. Kind regards, Benjamin."
+        document.getElementById("skillHeader").innerHTML="Skills"
+        document.getElementById("expHeader").innerHTML="Experience"
+        document.getElementById("eduHeader").innerHTML="Education"
+        document.getElementById("skillsText").innerHTML="<span>Back-End Development</span><br>I possess proficiency in Java, SQL and C#, and I have recently commenced utilizing Python as well."
+        document.getElementById("expText").innerHTML="<span>Front-End Development</span><br>I am proficient in coding with CSS and FXML, and HTML as well as javascript/typescript. Additionally, I engage in design and UX principles"
+        document.getElementById("eduText").innerHTML="<span>Adobe</span><br>I have been working with Adobe programs such as photoshop, aftereffects, illustrator, premiere etc. and hold a solid grasp of its contents"
+        document.getElementById("xp23").innerHTML="<span>2023 - </span><br>Employed part-time within a warehouse operation that encompasses order preparation and delivery. I assume occasional responsibilities for order management and staff supervision. At this time i was also studying for a computer science degree, however as we got to go through a year of fullstack work i discovered my passion lied within design and frontend work."
+        document.getElementById("xp19").innerHTML="<span>2019 - 2021</span><br>Was employed full-time as a Sales Assistant at a supermarket, where my responsibilities included customer care, warehouse work, and various other tasks."
+        document.getElementById("xp18").innerHTML="<span>2018 - 2019</span><br>I held the position of Sales Assistant and Closing Manager at a supermarket. My role encompassed overseeing the supermarket's operations, managing the staff,<br>and ensuring the smooth closing of the store at the end of each day, in addition to performing daily job tasks."
+        document.getElementById("xp13").innerHTML="<span>2013 - 2018</span><br>Prior to 2019, I gained experience working with various employers, including roles at a restaurant, as a babysitter, and at a logistics firm. However, I recognize that these experiences may not be relevant, which is why they won't be explained in detail."
+        document.getElementById("edu21").innerHTML="<span>2024 - </span><br>Multimedia design degree at EASV in Esbjerg Denmark."
+        document.getElementById("edu17").innerHTML="<span>2017 - 2020</span><br>Gymnasium degree, with The Higher Technical Examination Programme(HTX) being my chosen variant."
+        document.getElementById("edu07").innerHTML="<span>2008-2017</span><br>Primary School."
+        document.getElementById("portTitle").innerHTML="My Portfolio"
+        document.getElementById("portJava").innerHTML="I have plenty experience working with Java, FXML and SQL. I have successfully completed numerous projects, several of which are available for viewing through the following link."
+        document.getElementById("portBtn").innerHTML="Learn more"
+        document.getElementById("portHTML").innerHTML="I've been coding websites using HTML, CSS, JavaScript/typescript, and C#. As a result, I have a number of projects at this time. You can view some of these projects by clicking on the link below."
+        document.getElementById("portBtn2").innerHTML="Learn more"
+        document.getElementById("port3D").innerHTML="In my ambition to be a website developer, ive aquired skills in multiple of Adobes programs, such as Illustrator, Photoshop and After Effects. To this end ive completed multiple images,logos and videos for future reference and knowledge"
+        document.getElementById("portBtn3").innerHTML="Learn more"
+        document.getElementById("proTitle").innerHTML="Ongoing And Future Projects"
+        document.getElementById("netflixTitle").innerHTML="Online Netflix Clone"
+        document.getElementById("netflixDesc").innerHTML="A chatting website aimed at improving my skills with API and sending data. It is similar to many chatting sites with the exception of not using a database for anything but the users. Futhermore it is also to improve my skills on using jS to manipulate html components as i want the site to be highly customizeable."
+        document.getElementById("mapTitle").innerHTML="Chatsy"
+        document.getElementById("mapDesc").innerHTML="This strategic choice is driven by my desire to attain a high level of proficiency in effectively utilizing API keys and mastering the intricacies of their operation. Such expertise is increasingly valuable in today's digital landscape and aligns with my commitment to delivering robust and innovative web solutions."
+        document.getElementById("horTitle").innerHTML="Client Work"
+        document.getElementById("horDesc").innerHTML="Ive recently begun working freelance for clients. currently im working on a website for a start-up photographer. Mostly a simple but expensive website with a lot of attention to design. Its my first proper professional work, with communication and meetings with clients."
+        document.getElementById("proBtn").innerHTML="See more"
+        document.getElementById("conTitle").innerHTML="Contact"
+        document.getElementById("nameText").innerText
+    }
+
+
+</script>
+</div>
+</body>
+</html>

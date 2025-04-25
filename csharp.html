@@ -1,0 +1,747 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6cff64fb2c.js" crossorigin="anonymous"></script>
+    <script defer src="hideShow.js"> </script>
+</head>
+<body>
+<div id="header">
+<div class="container">
+    <nav>
+        <img src="images/logo.png" class="logo">
+
+        <ul id="sidemenu">
+            <li><a href="index.html" id="headerHome"><i class="fa-solid fa-arrow-left"></i>Return To Main</a> </li>
+            <li><a href="#card" id="headerAbout">Java Projects</a> </li>
+            <li><a href="#portfolio" id="headerProject">Future Projects</a> </li>
+            <li><a href="#contact" id="headerContact">Contact</a> </li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            <lan id="language">
+
+                <a href="#" language='English' class="active" onclick="setEnglish()"><img src="images/flag-united-kingdom-emoji-2048x1279-po023g13.png"></a>
+                <a href="#" language='Danish' onclick="setDanish()"><img src="images/flag-denmark-emoji-2048x1279-r54we2pz.png"></a>
+
+            </lan>
+        </ul>
+
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <div class="header-text">
+        <p class="headerTitle">C#/HTML</p>
+        <h1 id="headerDesc"> The subjext i love the most, webdeveloping, IE: <span>C#, HTML, CSS and Javascript/Typescript</span> I've completed different websites, Some in school and others in my personal/proffesional endeavors</h1>
+    </div>
+</div>
+</div>
+
+
+<script type="text/javascript" src="raw.githubusercontent.com_micku7zu_vanilla-tilt.js_master_dist_vanilla-tilt.js"></script>
+<script> VanillaTilt.init(document.querySelectorAll(".contentimg"), {
+    max: 8,
+    speed: 500,
+    reverse: true
+});</script>
+
+
+<div class="imageContainer">
+    <h1 class="subtitle" id="contentTitle"> Past Projects</h1>
+<div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+
+    <div class="kort" id="kort1">
+
+    <img class="image" src="images/htmlcard1.PNG" draggable="false" onclick="expand(this.src)">
+        <div class="kortLayer" id="kortLayer1">
+            <h2 class="cardTitle" id="card1Title">Mcdonalds Order System</h2>
+            <p class="cardBody" id="card1Body">A website made as a project inspired by mcdonalds, which imitates the ordering system of mcdonalds or other similar businesses. The system contains subjects like, frontend, API calls,
+                backend, database and cyber security.
+            </p>
+            <a href="#content" class="btn3" onclick="showNetflix()"><i class="fa-solid fa-angles-down"></i></a>
+        </div>
+    </div>
+    <div class="kort">
+    <img class="image" src="images/htmlcard2.PNG" draggable="false" onclick="expand(this.src)">
+        <div class="kortLayer">
+            <h2 class="cardTitle" id="card2Title">Online Chatting Site</h2>
+            <p class="cardBody" id="card2Body">We designed a messenger like website, Chatsy. It imitates the most used online chatting systems, with profile pictures and saved messages in a database, api calls and encryption of messages etc. </p>
+            <a href="#content" class="btn3" onclick="showTicket()"><i class="fa-solid fa-angles-down"></i></a>
+        </div>
+    </div>
+        <div class="kort">
+    <img class="image" src="images/htmlcard3.PNG" draggable="false" onclick="expand(this.src)">
+            <div class="kortLayer">
+                <h2 class="cardTitle" id="card3Title">Image To Translated Text</h2>
+                <p class="cardBody" id="card3Body">A small website, capable of translating text in an uploaded image to any language and output a translated text. This was achieved by using 2 AI services, image analysis and translations. Furthermore the site contains a screenshot and cropping feature. </p>
+                <a href="#content" class="btn3" onclick="showCat()"><i class="fa-solid fa-angles-down"></i></a>
+            </div>
+        </div>
+            <div class="kort">
+    <img class="image" src="images/Photography.PNG" draggable="false" onclick="expand(this.src)">
+                <div class="kortLayer">
+                    <h2 class="cardTitle" id="card4Title">Start Up Photographer Site</h2>
+                    <p class="cardBody" id="card4Body">A basic website for a new photographer, showcasing his work, prices, methods etc. We held meetings, sprints and the costumer explained his wants and needs.
+            
+                    </p>
+                    <a href="#content" class="btn3" onclick="showItunes()"><i class="fa-solid fa-angles-down"></i></a>
+                </div>
+            </div>
+                <div class="kort">
+    <img class="image" src="images/html4.png" draggable="false" onclick="expand(this.src)">
+                    <div class="kortLayer">
+                        <h2 class="cardTitle" id="card5Title">Feedback With Database</h2>
+                        <p class="cardBody" id="card5Body">A simple feedback website, used to get employees opnions and suggestions. It was connected straight to the costumers account via google sheets in his drive</p>
+                        <a href="#content" class="btn3" onclick="showAtt()"><i class="fa-solid fa-angles-down"></i></a>
+                    </div>
+                </div>
+                    <div class="kort">
+    <img class="image" src="images/plasticCard.jpg" draggable="false" onclick="expand(this.src)">
+                        <div class="kortLayer">
+                            <h2 class="cardTitle" id="card6Title">Microplastic Campain</h2>
+                            <p class="cardBody" id="card6Body">As our first semester exam project we created a site advocading for the anti plastic treaty and urging users to sign it. There were no database as focus was fully on design </p>
+                            <a href="#content" class="btn3" onclick="showAi()"><i class="fa-solid fa-angles-down"></i></a>
+                        </div>
+                    </div>
+                        
+
+</div>
+</div>
+<div id="content">
+    <div class="content" id="netflixContent">
+    <div class="contentContainer">
+        <h1 class="subtitleContent" id="netflixTitle">  Mcdonalds Order System</h1>
+        <div class="row1">
+            <div class="content-col-1 hidden">
+                <p class="aboutDesc" id="aboutDesc">Being one of my major projects, containing complex subjects including cybersecurity, API calls etc. its one of my more important projects. The site is made up of its frontend, made using Angular which ofcourse encompasses CSS, HTML and typescript. The backend were made with C# and lastly using postgres SQL as a database, in addition to extra tools such as Postman. 
+                    <br><br>
+                    The site had 3 roles, costumer, chef and admin. As can be seen on the left the employees would first have to log in at the start of the day. on the main screens they would log into a user acount, the chefs a chef acount etc.
+                    <br><br>
+                    When logging in, the site makes use of hashing and salting. that is, the password lies encrypted in the database so it cant be easily stolen, and as the user logs in, that value gets encrypted and compared to the database. furthermore the site made use of JSON Web Tokens(JWT) to securily transfer this data, and additionaly cookies to limit the time before a user had to log back in. 
+                    <br><br>
+                    And lastly the site was optimised to protect against the most common attacks such a sql injections etc. Making this site secure and safe to use.
+                </p>
+            </div>
+            <div class="content-col-2 hidden2">
+                <img class="contentimg" src="images/wackdLog.jpg">
+            </div>
+    </div>
+    <img class="contentimgbig" src="images/wackdUser.jpg">
+        <div class="row1">
+             <div class="content2-col-1 hidden">
+                <img class="contentimg" src="images/wackdCard.jpg">
+               
+            </div>
+            <div class="content2-col-2 hidden2">
+                 <p class="aboutDesc" id="aboutDesc2">As seen above and to the left, the user would be able to pick and choose between many orders all categorized and easy to find. The user then picks what they want, and costumize it after which the order gets added to the reciept. When the user then presses pay they get taken to the payment screen.
+                    <br><br>
+                    Obviously the site is not connected to any banks however it was instead used to show some understaning of protection against SQL injection as can be seen. When the user hen presses submit, an API is called and that order is then saved in the database.
+                    <br><br>
+                    Following this, the order is now retrieved by the chef and the admin, who use the data. In the admins case for statistics and in the chefs instance for displaying orders.
+
+
+                 </p>
+                <div class="social-icons">
+                    <h2>Code: <a href=""><i class="fa-brands fa-github"></i></a></h2>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>
+
+    <div class="content" id="ticketContent">
+        <div class="contentContainer">
+            <h1 class="subtitleContent" id="ticketTitle">  Event Manager</h1>
+            <div class="row1">
+                <div class="content-col-1">
+                    <p class="aboutDesc" id="aboutDesc3">In a major project, I created a Ticket Master system with three distinct roles: customers, event coordinators, and admins. Admins had the unique ability to create other admins and coordinators, sharing similar capabilities. Coordinators oversaw event management and customer orders, while customers could seamlessly purchase tickets.
+                        <br><br>
+                        The project's core challenge was implementing a robust authentication system, ensuring secure transactions. This emphasis on data security significantly deepened my understanding of user role management. It highlighted the critical nature of secure transactions in software development, enriching my overall knowledge in the domain.
+                        <br><br>
+                        This experience broadened my expertise in developing user-oriented systems and reinforced the significance of safeguarding data integrity. It served as a valuable lesson, shaping my approach towards secure and user-friendly software solutions.
+                        <br><br>
+                        The outcome of this process involved customers adding their information to the event coordinators' database. A sample ticket, displayed to the right, showcases details like name and start date. This seamless integration of customer data into the system and the structured ticket format marked the successful culmination of the project.</p>
+                </div>
+                <div class="content-col-2">
+                    <img class="contentimg" src="images/card22.png">
+                </div>
+            </div>
+            <img class="contentimgbig" src="images/card23.png">
+            <p class="aboutDescbig" id="aboutDescbig1">In the image above, customers navigated a clear ticket ordering interface. In this snapshot, unedited by coordinators,
+                the labels are visible, ready for customization. This illustrates the coordinator's ability to uniquely tailor event tickets.
+                While I aimed for a polished design using FXML, the focus remained on functionality, not aesthetics, reflecting the grading criteria.
+                The limited timeframe led to prioritizing functionality over aesthetics, resulting in a polished main screen and ticket interface but everything else being basic.
+                Investing more time in interface design wouldn't have impacted the grade significantly, hence the focus on core functionality.</p>
+            <div class="row1">
+                <div class="content2-col-1">
+                    <img class="contentimg" src="images/card21.png">
+                </div>
+                <div class="content2-col-2">
+
+                    <p class="aboutDesc" id="aboutDesc4">In the image to the left, customers encountered a central display of events, complemented by a login button and a search bar.<br> The project's success was underscored by flawless authentication implementation, the paramount objective in this endeavor.
+                        <br><br>
+                        Reflecting on this project, it was pivotal in teaching me authentication intricacies. It also familiarized me with the MVC pattern and the implementation of GoF design patterns, particularly Singleton. Beyond technical aspects, the project provided valuable exposure to client-coder relationships, emphasizing the significance of meticulous planning for meetings and sprints.
+                        <br><br>
+                        Utilizing tools like Trello streamlined our task management, enabling efficient task assignment among group members. This experience not only enhanced my technical skills but also honed my collaboration and project management abilities, preparing me for future, client-oriented software development endeavors.</p>
+                    <div class="social-icons">
+                        <h2>Code: <a href=""><i class="fa-brands fa-github"></i></a></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" id="catContent">
+        <div class="contentContainer">
+            <h1 class="subtitleContent" id="catTitle">  Categorization Application</h1>
+            <div class="row1">
+                <div class="content-col-2">
+                    <img class="contentimg" src="images/card31.png">
+                </div>
+                <div class="content-col-2">
+                    <img class="contentimg" src="images/card32.png">
+                </div>
+                <p class="aboutDesc" id="aboutDescbig2">As part of our exam project, we developed an application tailored for student use, enabling the classification and categorization of fictional patients across various categories and sub-categories. The system featured distinct roles: admin, teacher, and student.
+                    <br><br>
+                    Administrators held the authority to create other admins and teachers, establishing a hierarchical structure. Teachers, in turn, could generate patients and link students to these cases. Notably, teachers possessed the capability to create templates, streamlining the process of generating multiple unique patients for different student groups within a class.
+                    <br><br>
+                    Students accessed the system to view their assigned patients, delve into patient details, and contribute to their reports. The image above displays the intuitive report interface, comprising various categories and subcategories for detailed information editing.
+                    This project not only demonstrated our technical skills but also emphasized user roles and seamless data management, offering a comprehensive solution for educational purposes.</p>
+            </div>
+            <div class="row1">
+                <div class="content-col-1">
+                    <p class="aboutDesc" id="aboutDesc5">This project was a collaborative effort with SOSU, a school specializing in social and health education, where nursing and patient care are central. SOSU served as our client, leading to structured sprint meetings. They played a pivotal role in design decisions and functionality, shaping the project's direction and ensuring its alignment with real-world healthcare needs.
+                        <br><br>
+                        In the image to the left, students access the application, finding a list of their assigned patients. Clicking on a patient reveals detailed information. The two buttons in the lower left corner lead them to the corresponding screens displayed at the top, facilitating smooth navigation and enhancing user experience.
+                        <br><br>
+                        The deliberate choice of having appropriately sized buttons and text, along with detailed explanations for every feature, reflects our intentional design. Simplicity was paramount for our client, leading us to ensure clarity in every aspect. Moreover, the inclusion of question marks next to titles allows students to access detailed explanations, enhancing user understanding and engagement with the application.</p>
+                </div>
+                <div class="content-col-2">
+                    <img class="contentimg" src="images/card34.png">
+                </div>
+            </div>
+            <div class="row1">
+                <div class="content2-col-1">
+                    <img class="contentimg" src="images/card33.png">
+                </div>
+                <div class="content2-col-2">
+
+                    <p class="aboutDesc" id="aboutDesc6">In the teacher's view, depicted here, the process of assigning students to patients is simplified. Teachers can effortlessly sort and search for patients, select students, and establish connections with a simple click. The interface features three columns, allowing seamless management.
+                        <br><br>
+                        Additionally, teachers have the option to create templates, essentially opening the categorization screen shown in the images at the top. In this screen, teachers can input pre-made data, save it, and apply it to new patients or multiple unique patients, streamlining the data entry process effectively.
+                        <br><br>
+                        The application's complexity was substantial, involving multiple objects with diverse properties like students, teachers, admins, patients, and templates. To manage this complexity, adhering to programming principles was crucial. We meticulously followed these principles in class and method design, ensuring effective communication between classes and maintaining coherent naming conventions.
+                        <br><br>
+                        This experience proved invaluable in steering clear of tangled and convoluted code. By embracing structured practices, we successfully avoided spaghetti code, ensuring the application's robustness and maintainability.
+                        In summary, this project was vast, demanding a level of internal planning we hadn't previously encountered. It challenged us to new heights, emphasizing the importance of meticulous organization and structured development methodologies. Navigating this complexity provided invaluable insights, refining our approach to future large-scale endeavors.</p>
+                    <div class="social-icons">
+                        <h2>Code: <a href=""><i class="fa-brands fa-github"></i></a></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" id="tunesContent">
+        <div class="contentContainer">
+            <h1 class="subtitleContent" id="tunesTitle">  Itunes Clone</h1>
+            <div class="row1">
+                <div class="content2-col-1">
+                    <img class="contentimg" src="images/card41.png">
+                </div>
+                <div class="content2-col-2">
+                    <p class="aboutDesc" id="aboutDesc7">This application shares similarities with the movie collection project, functioning as a file categorization system, specifically for MP3 files. Users can add songs and freely categorize and edit them, mirroring the movie application's functionality. These customized categories, titles, and other details are stored in a database, enhancing user organization and accessibility.</p>
+                    <div class="social-icons">
+                        <h2>Code: <a href=""><i class="fa-brands fa-github"></i></a></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" id="attContent">
+        <div class="contentContainer">
+            <h1 class="subtitleContent" id="attTitle">  Attendance System</h1>
+            <div class="row1">
+                <div class="content-col-1">
+                    <p class="aboutDesc" id="aboutDesc8">This application served as a student attendance tracker, where students would scan a chip at a class screen, recording their name, date, and time upon scanning. The data was then seamlessly transmitted to a database, accessible for teachers on their end. This efficient system simplified attendance tracking, ensuring accurate and real-time recording of student attendance.</p>
+                </div>
+                <div class="content-col-2">
+                    <img class="contentimg" src="images/card51.png">
+                </div>
+            </div>
+            <img class="contentimgbig" src="images/card52.png">
+        </div>
+    </div>
+    <div class="content" id="aiContent">
+        <div class="contentContainer">
+            <h1 class="subtitleContent" id="aiTitle">  Tic-Tac-Toe AI</h1>
+            <div class="row1">
+                <div class="content2-col-1">
+                    <img class="contentimg" src="images/card61.png">
+                </div>
+                <div class="content2-col-2">
+                    <p class="aboutDesc" id="aboutDesc9">In this assignment, we delved into the realm of AI, particularly through a Tic-Tac-Toe game featuring an AI opponent. The AI operates on the mini-max principle, calculating optimal moves by exploring all possible game states. By assigning positive values to favorable moves, it determines the easiest path to victory or a draw. Unlike other applications, this one doesn't require a database connection due to its nature. However, the attributes and objects are designed in a way that seamlessly integrates with a database, ensuring flexibility in future implementations. Prior to this, we had also developed a simpler version using a Rock-Paper-Scissors game.</p>
+                    <div class="social-icons">
+                        <h2>Code: <a href=""><i class="fa-brands fa-github"></i></a></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content" id="imgContent">
+        <div class="contentContainer">
+            <h1 class="subtitleContent" id="imgTitle">  Image-Slider</h1>
+            <div class="row1">
+                <div class="content2-col-1">
+                    <img class="contentimg" src="images/card61.png">
+                </div>
+                <div class="content2-col-2">
+                    <p class="aboutDesc" id="aboutDesc10">Simple image slider. This was my very first project, however as its so simple this is just a temporary entry.</p>
+                    <div class="social-icons">
+                        <h2>Code: <a href=""><i class="fa-brands fa-github"></i></a></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    function showNetflix(){
+
+        const contents = document.querySelectorAll('.content');
+        contents.forEach(content => {
+            content.style.transform = "translateY(-100%)";
+            content.style.opacity = "0";
+            content.style.height = "0";
+            content.style.transition = "none";
+        });
+
+
+
+
+        document.getElementById("netflixContent").style.transform="translateY(0px)";
+        document.getElementById("netflixContent").style.opacity="100%"
+        document.getElementById("netflixContent").style.height="100%";
+        document.getElementById("content").style.height="100%";
+        document.getElementById("netflixContent").style.transition = "transform 1.5s, height 1.5s, opacity 6s";
+
+
+    }
+
+    function showTicket(){
+        const contents = document.querySelectorAll('.content');
+        contents.forEach(content => {
+            content.style.transform = "translateY(-100%)";
+            content.style.opacity = "0";
+            content.style.height = "0";
+            content.style.transition = "none";
+        });
+
+
+
+        document.getElementById("ticketContent").style.transform="translateY(0px)";
+        document.getElementById("ticketContent").style.opacity="100%"
+        document.getElementById("ticketContent").style.height="100%";
+        document.getElementById("content").style.height="100%";
+        document.getElementById("ticketContent").style.transition = "transform 1.5s, height 1.5s, opacity 6s";
+
+
+    }
+    function showCat() {
+
+        const contents = document.querySelectorAll('.content');
+        contents.forEach(content => {
+            content.style.transform = "translateY(-100%)";
+            content.style.opacity = "0";
+            content.style.height = "0";
+            content.style.transition = "none";
+        });
+        document.getElementById("catContent").style.transform="translateY(0px)";
+        document.getElementById("catContent").style.opacity="100%"
+        document.getElementById("catContent").style.height="100%";
+        document.getElementById("content").style.height="100%";
+        document.getElementById("catContent").style.transition = "transform 1.5s, height 1.5s, opacity 6s";
+    }
+
+        function showItunes() {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                content.style.transform = "translateY(-100%)";
+                content.style.opacity = "0";
+                content.style.height = "0";
+                content.style.transition = "none";
+            });
+            document.getElementById("tunesContent").style.transform="translateY(0px)";
+            document.getElementById("tunesContent").style.opacity="100%"
+            document.getElementById("tunesContent").style.height="100%";
+            document.getElementById("content").style.height="100%";
+            document.getElementById("tunesContent").style.transition = "transform 1.5s, height 1.5s, opacity 6s";
+        }
+
+    function showAtt() {
+        const contents = document.querySelectorAll('.content');
+        contents.forEach(content => {
+            content.style.transform = "translateY(-100%)";
+            content.style.opacity = "0";
+            content.style.height = "0";
+            content.style.transition = "none";
+        });
+        document.getElementById("attContent").style.transform="translateY(0px)";
+        document.getElementById("attContent").style.opacity="100%"
+        document.getElementById("attContent").style.height="100%";
+        document.getElementById("content").style.height="100%";
+        document.getElementById("attContent").style.transition = "transform 1.5s, height 1.5s, opacity 6s";
+    }
+
+    function showAi() {
+        const contents = document.querySelectorAll('.content');
+        contents.forEach(content => {
+            content.style.transform = "translateY(-100%)";
+            content.style.opacity = "0";
+            content.style.height = "0";
+            content.style.transition = "none";
+        });
+        document.getElementById("aiContent").style.transform="translateY(0px)";
+        document.getElementById("aiContent").style.opacity="100%"
+        document.getElementById("aiContent").style.height="100%";
+        document.getElementById("content").style.height="100%";
+        document.getElementById("aiContent").style.transition = "transform 1.5s, height 1.5s, opacity 6s";
+    }
+
+    function showImg() {
+        const contents = document.querySelectorAll('.content');
+        contents.forEach(content => {
+            content.style.transform = "translateY(-100%)";
+            content.style.opacity = "0";
+            content.style.height = "0";
+            content.style.transition = "none";
+        });
+        document.getElementById("imgContent").style.transform="translateY(0px)";
+        document.getElementById("imgContent").style.opacity="100%"
+        document.getElementById("imgContent").style.height="100%";
+        document.getElementById("content").style.height="100%";
+        document.getElementById("imgContent").style.transition = "transform 1.5s, height 1.5s, opacity 6s";
+    }
+
+
+
+
+
+    const track = document.getElementById("image-track");
+    let isDragged = false;
+
+    window.onmousedown = e =>{
+        track.dataset.mouseDownAt = e.clientX;
+
+
+    }
+
+
+    window.onmousemove = e => {
+        if (track.dataset.mouseDownAt === "0") return;
+
+
+            const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX, maxDelta = window.innerWidth / 2;
+            const percentage = (mouseDelta / maxDelta) * -100,
+                nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
+                nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -68);
+            track.dataset.percentage = nextPercentage;
+
+        if (Math.abs(mouseDelta) >= 1) {
+            isDragged = true;
+        }
+
+            track.animate({
+                transform: `translate(${nextPercentage}%, 0%)`
+            }, {duration: 1200, fill: "forwards"});
+
+            for (const image of track.getElementsByClassName("image")) {
+                image.animate({
+                    objectPosition: `${100 + nextPercentage}% center`
+                }, {duration: 1200, fill: "forwards"});
+            }
+        }
+
+
+    window.onmouseup = () =>{
+
+        if (isDragged !== false) {
+            track.dataset.mouseDownAt = "0";
+            track.dataset.prevPercentage = track.dataset.percentage;
+        }
+        else
+            track.dataset.mouseDownAt = "0";
+    }
+</script>
+<div id="portfolio">
+    <div class="container hidden">
+        <h1 class="subtitle" id="proTitle">  Ongoing Projects</h1>
+        <div class="work-list">
+            <div class="work2">
+                <img src="images/photography2.PNG">
+                <div class="layer">
+                    <h3 id="mapTitle">Photographer Website</h3>
+                    <p id="mapDesc">The development of the start-up photographers website is currently on-going.</p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left hidden">
+                <h1 class="subtitle" id="conTitle">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane" ></i>benjasteckmetz@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>22889242</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <a href="images/CV.mp4" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right hidden2">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required id="nameText">
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+   <!-- function opentab(tabname) {
+        for (tablink of tablinks) {
+         tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }-->
+
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+
+    function setDanish(){
+
+        document.getElementById("headerDesc").innerHTML="Mit første programmeringssprog var <span>Java.</span> Jeg har færdiggjort forskellige projekter,<br>eksempelvis en Netflix klon og en Tic-Tac-Toe AI.";
+        document.getElementById("headerHome").innerHTML="Tilbage Til Forsiden"
+            document.getElementById("headerAbout").innerHTML="Java Projekter"
+                document.getElementById("headerProject").innerHTML="Fremtidige Projekter"
+                    document.getElementById("headerContact").innerHTML="Kontakt"
+
+        document.getElementById("contentTitle").innerHTML="Tidligere Projekter"
+            document.getElementById("card1Title").innerHTML="Film Kollektion"
+                document.getElementById("card2Title").innerHTML="Billet Master"
+                    document.getElementById("card3Title").innerHTML="Kategoriseringsapplikation"
+                        document.getElementById("card4Title").innerHTML="Itunes Klon"
+                            document.getElementById("card5Title").innerHTML="tilstedeværelse"
+                                 document.getElementById("card6Title").innerHTML="Kryds-Og-Bolle AI"
+                                    document.getElementById("card7Title").innerHTML="Billede Slider"
+                                        document.getElementById("card1Body").innerHTML="En alsidig applikation, der giver brugerne mulighed for at gennemse, kategorisere, søge, redigere og se film. Den leveres med to film forudindlæst og tillader nem tilføjelse af nye film ved blot at tilføje filen klar til kategorisering, osv."
+                                             document.getElementById("card2Body").innerHTML="Vi designede et alsidigt billetsystem, der giver kunder mulighed for at gennemse og bestille billetter til arrangementer, med transaktionen baseret på robust autorisation. Systemet indeholder administrator- og begivenhedskoordinatorroller for at muliggøre effektivt arrangementhåndtering."
+                                                document.getElementById("card3Body").innerHTML="Et samarbejde med en anden skole for at skabe en prototypapplikation til kategorisering af patienter efter sygdomme. Administrator- og lærerroller muliggør problemfri tildeling af studerende til patienter og forbedrer uddannelseseffektiviteten."
+                                                    document.getElementById("card4Body").innerHTML="Vi skabte et brugervenligt program til lagring og administration af MP3-musikfiler. Brugerne kan ubesværet gemme, kategorisere, afspille og redigere deres musiksamling, hvor fokus ligger på enkelthed, takket være ubegrænsede lagrings- og kategoriseringsoptioner."
+                                                        document.getElementById("card5Body").innerHTML="Vi udviklede et program til registrering af studerendes deltagelse, der bruger et chip-scanning system. Brugere kan bekræfte deres deltagelse gennem scanningprocessen, og disse optegnelser lagres effektivt og vises til lærernes reference."
+                                                            document.getElementById("card6Body").innerHTML="Vi skabte et Tic-Tac-Toe-spil med muligheder for både AI og menneskelig spil. AI'en bruger Minimax for en udfordrende oplevelse og gør det næsten umuligt at vinde over den, og koden modularitet gør det nemt at tilpasse den til andre spil som f.eks. skak."
+                                                                document.getElementById("card7Body").innerHTML="Selvom det ikke er den mest imponerende applikation, er det stadig bemærkelsesværdigt, da det var min allerførste kodningsopgave nogensinde."
+        document.getElementById("netflixTitle").innerHTML="Netflix Klon"
+            document.getElementById("aboutDesc").innerHTML="Som et afgørende tidligt projekt påtog vi os udviklingen af en Netflix-inspireret applikation med primært fokus på backend-funktionaliteten. I dette projekt var vores mål ikke kun at konstruere et enkelt og intuitivt brugergrænseflade, men også at demonstrere dybden af vores backend-ekspertise, der omfatter databasehåndtering og kompleks logik. <br><br> Applikationen begyndte med en database, der indeholdt to standardfilm, der fungerede som et fundamentalt udgangspunkt. For at fremme brugerengagement implementerede vi en funktion, der tillod brugere at udvide filmsamlingen letpå. Denne fleksibilitet udvidede sig til muligheden for at kategorisere film efter brugerens præferencer og dermed effektivt tilpasse deres virtuelle streamingbibliotek. <br><br>Desuden tilbød vores system omfattende redigeringsmuligheder. Brugerne havde autonomi til at ændre forskellige aspekter af hver filmindgang, såsom at ændre titler eller justere vurderinger, hvilket gav dem en skræddersyet og dynamisk filmstyringsoplevelse. Denne opgave viste ikke kun vores backend-færdigheder, men illustrerede også vores engagement i brugervenligt design og interaktiv funktionalitet."
+                document.getElementById("aboutDesc2").innerHTML="Reflekterende over dette projekt står det klart som et afgørende øjeblik i min programmeringsrejse. Jeg påtog mig udviklingen af en applikation, der krævede oprettelsen af komplekse funktioner. En af disse var en dynamisk søgebjælke, der tilbød brugerne muligheden for at finjustere deres søgninger med muligheder for kategorier eller filmnavne. Dette viste ikke kun mine problemløsningsfærdigheder, men forbedrede også betydeligt applikationens brugervenlighed.\n" +
+                    "<br><br>\n" +
+                    "En anden bemærkelsesværdig præstation var den vellykkede implementering af synkroniserede videospillerkontroller, herunder en skydeknappen til at navigere problemfrit gennem videoer. Denne tilføjelse berigede ikke kun brugeroplevelsen, men krævede også mestring af kompleks logik.\n" +
+                    "<br><br>\n" +
+                    "Desuden fungerede projektet som en omfattende udforskning af SQL. Det gav praktisk erfaring med forskellige aspekter, såsom oprettelse, opdatering og sletning af indtægter i databasen. Forståelsen af nøgleforhold til at forbinde film med kategorier tilføjede dybde til min SQL-færdigheder.\n" +
+                    "<br><br>\n" +
+                    "Sammenfattende var dette projekt mere end bare en opgave; det var en transformerende læringsrejse. Det udvidede min tekniske ekspertise, skærpede mine problemløsningskompetencer og øgede min værdsættelse for softwareudviklingens mangfoldige karakter."
+                    document.getElementById("ticketTitle").innerHTML="Billet Mester"
+                        document.getElementById("aboutDesc3").innerHTML="I et større projekt skabte jeg et Ticket Master-system med tre distinkte roller: kunder, eventkoordinatorer og administratorer. Administratorer havde den unikke evne til at oprette andre administratorer og koordinatorer, der delte lignende beføjelser. Koordinatorer havde ansvaret for eventhåndtering og kundeordrer, mens kunder problemfrit kunne købe billetter.\n" +
+                            "<br><br>\n" +
+                            "Projektets kerneudfordring var implementeringen af et robust autentifikationssystem for at sikre sikre transaktioner. Dette fokus på datasikkerhed fordybede betydeligt min forståelse af brugerrollehåndtering. Det fremhævede den kritiske karakter af sikre transaktioner inden for softwareudvikling og berigede min samlede viden på området.\n" +
+                            "<br><br>\n" +
+                            "Denne erfaring udvidede min ekspertise inden for udvikling af brugerorienterede systemer og understregede betydningen af at beskytte dataintegriteten. Den tjente som en værdifuld lektion og formede min tilgang til sikre og brugervenlige softwareløsninger.\n" +
+                            "<br><br>\n" +
+                            "Resultatet af denne proces involverede, at kunder tilføjede deres information til eventkoordinatorernes database. En eksempelbillet, vist til højre, viser detaljer som navn og startdato. Denne problemfri integration af kundedata i systemet og den strukturerede billetformular markerede den vellykkede afslutning på projektet."
+                            document.getElementById("aboutDesc4").innerHTML="I billedet til venstre stødte kunder på en central skærm med begivenheder, suppleret af en login-knap og en søgebjælke.\n" +
+                                "<br><br>\n" +
+                                "Projektets succes blev understreget af en fejlfri implementering af autentifikation, det overordnede mål i denne indsats.\n" +
+                                "<br><br>\n" +
+                                "Når jeg reflekterer over dette projekt, var det afgørende for at lære mig autentifikationsintricacies. Det gjorde mig også bekendt med MVC-mønstret og implementeringen af GoF designmønstre, især Singleton. Udover de tekniske aspekter gav projektet værdifuld indsigt i klient-kodernes forhold og understregede vigtigheden af omhyggelig planlægning til møder og sprints.\n" +
+                                "<br><br>\n" +
+                                "Ved at bruge værktøjer som Trello strømlinede vi vores opgavehåndtering, hvilket gjorde det muligt at tildele opgaver effektivt blandt gruppe medlemmer. Denne erfaring forbedrede ikke kun mine tekniske færdigheder, men også mine samarbejds- og projektstyringsevner og forberedte mig til fremtidige, klientorienterede softwareudviklingsprojekter."
+                                document.getElementById("aboutDescbig1").innerHTML="På billedet ovenfor navigerede kunderne gennem en tydelig grænseflade til billetbestilling. I dette øjebliksbillede, uredigeret af koordinatorer,\n" +
+                                    "labelsne er synlige og klar til tilpasning. Dette illustrerer koordinatorens evne til unikt at tilpasse eventbilletter.\n" +
+                                    "Mens jeg stræbte efter et poleret design ved hjælp af FXML, lå fokus på funktionalitet, ikke æstetik, hvilket afspejler vurderingskriterierne.\n" +
+                                    "Det begrænsede tidsramme førte til prioritering af funktionalitet over æstetik, hvilket resulterede i en veludført hovedskærm og billetgrænseflade, men alt andet var grundlæggende.\n" +
+                                    "At investere mere tid i grænsefladedesign ville ikke have påvirket karakteren betydeligt, derfor lå fokus på kernefunktionaliteten."
+                                    document.getElementById("catTitle").innerHTML="Kategoriseringsapplikation"
+        document.getElementById("aboutDescbig2").innerHTML="Som en del af vores eksamensprojekt udviklede vi en applikation skræddersyet til studerende, der gjorde det muligt at klassificere og kategorisere fiktive patienter på tværs af forskellige kategorier og underkategorier. Systemet inkluderede forskellige roller: administrator, lærer og studerende.\n" +
+            "<br><br>\n" +
+            "Administratorer havde beføjelse til at oprette andre administratorer og lærere, hvilket etablerede en hierarkisk struktur. Lærere kunne igen generere patienter og knytte studerende til disse tilfælde. Især havde lærere evnen til at oprette skabeloner, hvilket strømlinede processen med at generere flere unikke patienter til forskellige studentergrupper inden for en klasse.\n" +
+            "<br><br>\n" +
+            "Studerende kunne få adgang til systemet for at se deres tildelte patienter, dykke ned i patientdetaljer og bidrage til deres rapporter. Billedet ovenfor viser den intuitive rapportgrænseflade, der omfatter forskellige kategorier og underkategorier til redigering af detaljeret information.\n" +
+            "Dette projekt demonstrerede ikke kun vores tekniske færdigheder, men understregede også brugerroller og problemfri datamanagement, og tilbød en omfattende løsning til uddannelsesformål."
+        document.getElementById("aboutDesc5").innerHTML="Dette projekt var et samarbejdsinitiativ med SOSU, en skole specialiseret inden for social- og sundhedsuddannelse, hvor sygepleje og patientpleje er centrale emner. SOSU fungerede som vores klient og førte til strukturerede sprintmøder. De spillede en afgørende rolle i designbeslutninger og funktionaliteter, forme projektets retning og sikre, at det var i overensstemmelse med virkelige sundhedsplejebehov.\n" +
+            "<br><br>\n" +
+            "På billedet til venstre får studerende adgang til applikationen og finder en liste over deres tildelte patienter. Ved at klikke på en patient vises detaljerede oplysninger. De to knapper i nederste venstre hjørne fører dem til de tilsvarende skærme vist øverst, hvilket muliggør problemfri navigation og forbedrer brugeroplevelsen.\n" +
+            "<br><br>\n" +
+            "Den bevidste beslutning om at have passende store knapper og tekst, sammen med detaljerede forklaringer til hver funktion, afspejler vores hensigtsmæssige design. Enkelhed var afgørende for vores klient, hvilket førte os til at sikre klarhed på alle områder. Desuden giver inklusionen af spørgsmålstegn ved siden af titlerne studerende mulighed for at få adgang til detaljerede forklaringer, hvilket forbedrer forståelsen og engagementet med applikationen."
+        document.getElementById("aboutDesc6").innerHTML="I lærerens visning, som er afbildet her, er processen med at tildele studerende til patienter forenklet. Lærere kan ubesværet sortere og søge efter patienter, vælge studerende og etablere forbindelser med et enkelt klik. Grænsefladen har tre kolonner, der tillader problemfri håndtering.\n" +
+            "<br><br>\n" +
+            "Derudover har lærere mulighed for at oprette skabeloner, hvilket i det væsentlige åbner kategoriseringsgrænsefladen vist i billederne øverst. I denne skærm kan lærere indtaste forhåndsindtagede data, gemme det og anvende det på nye patienter eller flere unikke patienter, hvilket effektivt strømliner dataindtastningsprocessen.\n" +
+            "<br><br>\n" +
+            "Applikationens kompleksitet var betydelig og involverede flere objekter med forskellige egenskaber som studerende, lærere, administratorer, patienter og skabeloner. For at håndtere denne kompleksitet var det afgørende at overholde programmeringsprincipperne. Vi fulgte omhyggeligt disse principper i klasse- og metodedesign og sikrede effektiv kommunikation mellem klasser samt sammenhængende navngivningskonventioner.\n" +
+            "<br><br>\n" +
+            "Denne erfaring viste sig uvurderlig til at undgå indviklet og forvirrende kode. Ved at omfavne strukturerede metoder undgik vi succesfuldt spaghettikode og sikrede applikationens robusthed og vedligeholdelighed.\n" +
+            "<br><br>\n" +
+            "Sammenfattende var dette projekt omfattende og krævede et niveau af intern planlægning, som vi ikke tidligere havde stået over for. Det udfordrede os til nye højder og understregede vigtigheden af omhyggelig organisation og strukturerede udviklingsmetoder. At navigere i denne kompleksitet gav uvurderlige indsigter og forfine vores tilgang til fremtidige storskalaprojekter."
+        document.getElementById("tunesTitle").innerHTML="Itunes Klon"
+        document.getElementById("aboutDesc7").innerHTML="Denne applikation deler ligheder med filmkollektionsprojektet og fungerer som et filkategoriseringssystem, specifikt til MP3-filer. Brugere kan tilføje sange og frit kategorisere og redigere dem, hvilket afspejler filmapplikationens funktionalitet. Disse tilpassede kategorier, titler og andre detaljer gemmes i en database, hvilket forbedrer brugerens organisering og tilgængelighed."
+        document.getElementById("attTitle").innerHTML="tilstedeværelses Program"
+        document.getElementById("aboutDesc8").innerHTML="Denne applikation fungerede som en studenterdeltagelsesregistrering, hvor studerende ville scanne en chip på en klasseskærm, hvilket registrerede deres navn, dato og tidspunkt ved scanning. Data blev derefter problemfrit transmitteret til en database, der var tilgængelig for lærere. Dette effektive system forenklet deltagerregistrering og sikrede nøjagtig og realtidsregistrering af studenterdeltagelse."
+        document.getElementById("aiTitle").innerHTML="Kryd-Og-Bolle AI"
+        document.getElementById("aboutDesc9").innerHTML="I denne opgave dykkede vi ned i AI-verdenen, især gennem et Tic-Tac-Toe spil med en AI-modstander. AI'en opererer på min-max-princippet og beregner optimale træk ved at udforske alle mulige spiltilstande. Ved at tildele positive værdier til fordelagtige træk bestemmer den den letteste vej til sejr eller uafgjort. I modsætning til andre applikationer kræver denne ikke en databaseforbindelse på grund af sin karakter. Dog er attributter og objekter designet på en måde, der problemfrit integrerer med en database og sikrer fleksibilitet i fremtidige implementeringer. Før dette havde vi også udviklet en enklere version ved hjælp af et sten-saks-papir-spil."
+        document.getElementById("imgTitle").innerHTML="Billede Slider"
+        document.getElementById("aboutDesc10").innerHTML="Enkel billedslider. Dette var mit allerførste projekt, men da det er så simpelt, er dette kun en midlertidig indgang."
+        document.getElementById("proTitle").innerHTML="Pågående og fremtidige projekter."
+        document.getElementById("mapTitle").innerHTML="Ups, ser ud til, at det er tomt herinde."
+        document.getElementById("mapDesc").innerHTML="På nuværende tidspunkt er der ikke noget planlagt for Java. Måske i fremtiden, men lige nu er jeg travlt optaget af projekter på andre sprog."
+        document.getElementById("conTitle").innerHTML="Kontakt Mig"
+
+
+
+
+
+
+
+    }
+
+    function setEnglish(){
+        document.getElementById("headerDesc").innerHTML="My first language was <span>Java.</span> I've completed various projects,<br>including a Netflix clone and a Tic-Tac-Toe AI.";
+        document.getElementById("headerHome").innerHTML="Return To Main"
+        document.getElementById("headerAbout").innerHTML="Java Projects"
+        document.getElementById("headerProject").innerHTML="Future Projects"
+        document.getElementById("headerContact").innerHTML="Contact"
+
+        document.getElementById("contentTitle").innerHTML="Past Projects"
+        document.getElementById("card1Title").innerHTML="Movie Collection"
+        document.getElementById("card2Title").innerHTML="Ticket Master"
+        document.getElementById("card3Title").innerHTML="Categorization Application"
+        document.getElementById("card4Title").innerHTML="Itunes Clone"
+        document.getElementById("card5Title").innerHTML="Attendance System"
+        document.getElementById("card6Title").innerHTML="Tic-Tac-Toe AI"
+        document.getElementById("card7Title").innerHTML="Image Slider"
+        document.getElementById("card1Body").innerHTML="A versatile program enabling users to browse, categorize, search, edit, and watch movies. It comes preloaded with two movies and allows effortless addition of new ones by simply providing the file ready for categorization Etc."
+        document.getElementById("card2Body").innerHTML="We designed a versatile ticketing system for customers to browse and book event tickets, With the transaction built on robust authorization. With admin and event coordinator roles to empower efficient event management."
+        document.getElementById("card3Body").innerHTML="A collaboration with another school to create a prototype application for patient categorization by ailments. Admin and teacher roles enable seamless student-patient assignments, enhancing educational efficiency."
+        document.getElementById("card4Body").innerHTML="We created a user-friendly program for storing and managing MP3 music files. Users can effortlessly save, categorize, play, and edit their music collection, emphasizing simplicity due to limitless storage and categorization options."
+        document.getElementById("card5Body").innerHTML="We developed a student attendance recording program that utilizes a chip-scanning system. Users can confirm their attendance through the scanning process, and these records are efficiently stored and displayed for teachers' reference."
+        document.getElementById("card6Body").innerHTML="We created a Tic-Tac-Toe game with AI and human play options. The AI uses Minimax for a challenging experience and makes it almost impossible to win over, and the code's modularity allows for easy adaptation to other games such as chess."
+        document.getElementById("card7Body").innerHTML="While not the most impressive application, It's still noteworthy as this was my first coding assignment ever."
+        document.getElementById("netflixTitle").innerHTML="Netflix Clone"
+        document.getElementById("aboutDesc").innerHTML="As a pivotal early project, we undertook the development of a Netflix-inspired application with a primary emphasis on the backend functionality. In this project, our goal was not only to construct a simple and intuitive user interface but also to demonstrate the depth of our backend expertise encompassing database management and intricate logic.\n" +
+            "                    <br><br>\n" +
+            "                    The application commenced with a database housing two default movies, serving as a foundational starting point. To foster user engagement, we implemented a feature allowing users to effortlessly expand the movie collection by adding their own selections. This flexibility extended to the ability to categorize movies according to the user's preferences, effectively personalizing their virtual streaming library.\n" +
+            "                    <br><br>\n" +
+            "                    Moreover, our system offered a comprehensive editing capability. Users had the autonomy to modify various aspects of each movie entry, such as altering titles or adjusting ratings, providing them with a tailored and dynamic movie management experience. This assignment not only showcased our backend prowess but also illustrated our dedication to user-friendly design and interactive functionality.."
+        document.getElementById("aboutDesc2").innerHTML="Reflecting on this project, it stands out as a pivotal moment in my programming journey. I undertook the development of an application that demanded the creation of intricate features. One of these was a dynamic search bar, offering users the ability to fine-tune their searches with options for categories or movie names. This not only showcased my problem-solving skills but also significantly enhanced the application's user-friendliness.\n" +
+            "                    <br><br>\n" +
+            "                    Another noteworthy achievement was the successful implementation of synchronized video player controls, including a slider to navigate through videos seamlessly. This addition not only enriched the user experience but also required mastering complex logic.\n" +
+            "                    <br><br>\n" +
+            "                    Furthermore, the project served as a comprehensive exploration of SQL. It afforded hands-on experience in various aspects, such as creating, updating, and deleting entries within the database. The understanding of key relationships to connect movies with categories added depth to my SQL proficiency.\n" +
+            "                    <br><br>\n" +
+            "                    In summary, this project was more than just an assignment; it was a transformative learning journey. It broadened my technical expertise, honed my problem-solving abilities, and deepened my appreciation for the multifaceted nature of software development"
+        document.getElementById("ticketTitle").innerHTML="Ticket Master"
+        document.getElementById("aboutDesc3").innerHTML="In a major project, I created a Ticket Master system with three distinct roles: customers, event coordinators, and admins. Admins had the unique ability to create other admins and coordinators, sharing similar capabilities. Coordinators oversaw event management and customer orders, while customers could seamlessly purchase tickets.\n" +
+            "                        <br><br>\n" +
+            "                        The project's core challenge was implementing a robust authentication system, ensuring secure transactions. This emphasis on data security significantly deepened my understanding of user role management. It highlighted the critical nature of secure transactions in software development, enriching my overall knowledge in the domain.\n" +
+            "                        <br><br>\n" +
+            "                        This experience broadened my expertise in developing user-oriented systems and reinforced the significance of safeguarding data integrity. It served as a valuable lesson, shaping my approach towards secure and user-friendly software solutions.\n" +
+            "                        <br><br>\n" +
+            "                        The outcome of this process involved customers adding their information to the event coordinators' database. A sample ticket, displayed to the right, showcases details like name and start date. This seamless integration of customer data into the system and the structured ticket format marked the successful culmination of the project."
+        document.getElementById("aboutDesc4").innerHTML="In the image to the left, customers encountered a central display of events, complemented by a login button and a search bar.<br> The project's success was underscored by flawless authentication implementation, the paramount objective in this endeavor.\n" +
+            "                        <br><br>\n" +
+            "                        Reflecting on this project, it was pivotal in teaching me authentication intricacies. It also familiarized me with the MVC pattern and the implementation of GoF design patterns, particularly Singleton. Beyond technical aspects, the project provided valuable exposure to client-coder relationships, emphasizing the significance of meticulous planning for meetings and sprints.\n" +
+            "                        <br><br>\n" +
+            "                        Utilizing tools like Trello streamlined our task management, enabling efficient task assignment among group members. This experience not only enhanced my technical skills but also honed my collaboration and project management abilities, preparing me for future, client-oriented software development endeavors.In the image to the left, customers encountered a central display of events, complemented by a login button and a search bar.<br> The project's success was underscored by flawless authentication implementation, the paramount objective in this endeavor.\n" +
+            "                        <br><br>\n" +
+            "                        Reflecting on this project, it was pivotal in teaching me authentication intricacies. It also familiarized me with the MVC pattern and the implementation of GoF design patterns, particularly Singleton. Beyond technical aspects, the project provided valuable exposure to client-coder relationships, emphasizing the significance of meticulous planning for meetings and sprints.\n" +
+            "                        <br><br>\n" +
+            "                        Utilizing tools like Trello streamlined our task management, enabling efficient task assignment among group members. This experience not only enhanced my technical skills but also honed my collaboration and project management abilities, preparing me for future, client-oriented software development endeavors."
+        document.getElementById("aboutDescbig1").innerHTML="In the image above, customers navigated a clear ticket ordering interface. In this snapshot, unedited by coordinators,\n" +
+            "                the labels are visible, ready for customization. This illustrates the coordinator's ability to uniquely tailor event tickets.\n" +
+            "                While I aimed for a polished design using FXML, the focus remained on functionality, not aesthetics, reflecting the grading criteria.\n" +
+            "                The limited timeframe led to prioritizing functionality over aesthetics, resulting in a polished main screen and ticket interface but everything else being basic.\n" +
+            "                Investing more time in interface design wouldn't have impacted the grade significantly, hence the focus on core functionality."
+        document.getElementById("catTitle").innerHTML="Categorization Application"
+        document.getElementById("aboutDescbig2").innerHTML="As part of our exam project, we developed an application tailored for student use, enabling the classification and categorization of fictional patients across various categories and sub-categories. The system featured distinct roles: admin, teacher, and student.\n" +
+            "                    <br><br>\n" +
+            "                    Administrators held the authority to create other admins and teachers, establishing a hierarchical structure. Teachers, in turn, could generate patients and link students to these cases. Notably, teachers possessed the capability to create templates, streamlining the process of generating multiple unique patients for different student groups within a class.\n" +
+            "                    <br><br>\n" +
+            "                    Students accessed the system to view their assigned patients, delve into patient details, and contribute to their reports. The image above displays the intuitive report interface, comprising various categories and subcategories for detailed information editing.\n" +
+            "                    This project not only demonstrated our technical skills but also emphasized user roles and seamless data management, offering a comprehensive solution for educational purposes."
+        document.getElementById("aboutDesc5").innerHTML="This project was a collaborative effort with SOSU, a school specializing in social and health education, where nursing and patient care are central. SOSU served as our client, leading to structured sprint meetings. They played a pivotal role in design decisions and functionality, shaping the project's direction and ensuring its alignment with real-world healthcare needs.\n" +
+            "                        <br><br>\n" +
+            "                        In the image to the left, students access the application, finding a list of their assigned patients. Clicking on a patient reveals detailed information. The two buttons in the lower left corner lead them to the corresponding screens displayed at the top, facilitating smooth navigation and enhancing user experience.\n" +
+            "                        <br><br>\n" +
+            "                        The deliberate choice of having appropriately sized buttons and text, along with detailed explanations for every feature, reflects our intentional design. Simplicity was paramount for our client, leading us to ensure clarity in every aspect. Moreover, the inclusion of question marks next to titles allows students to access detailed explanations, enhancing user understanding and engagement with the application."
+        document.getElementById("aboutDesc6").innerHTML="In the teacher's view, depicted here, the process of assigning students to patients is simplified. Teachers can effortlessly sort and search for patients, select students, and establish connections with a simple click. The interface features three columns, allowing seamless management.\n" +
+            "                        <br><br>\n" +
+            "                        Additionally, teachers have the option to create templates, essentially opening the categorization screen shown in the images at the top. In this screen, teachers can input pre-made data, save it, and apply it to new patients or multiple unique patients, streamlining the data entry process effectively.\n" +
+            "                        <br><br>\n" +
+            "                        The application's complexity was substantial, involving multiple objects with diverse properties like students, teachers, admins, patients, and templates. To manage this complexity, adhering to programming principles was crucial. We meticulously followed these principles in class and method design, ensuring effective communication between classes and maintaining coherent naming conventions.\n" +
+            "                        <br><br>\n" +
+            "                        This experience proved invaluable in steering clear of tangled and convoluted code. By embracing structured practices, we successfully avoided spaghetti code, ensuring the application's robustness and maintainability.\n" +
+            "                        In summary, this project was vast, demanding a level of internal planning we hadn't previously encountered. It challenged us to new heights, emphasizing the importance of meticulous organization and structured development methodologies. Navigating this complexity provided invaluable insights, refining our approach to future large-scale endeavors."
+        document.getElementById("tunesTitle").innerHTML="Itunes Clone"
+        document.getElementById("aboutDesc7").innerHTML="This application shares similarities with the movie collection project, functioning as a file categorization system, specifically for MP3 files. Users can add songs and freely categorize and edit them, mirroring the movie application's functionality. These customized categories, titles, and other details are stored in a database, enhancing user organization and accessibility."
+        document.getElementById("attTitle").innerHTML="Attendance System"
+        document.getElementById("aboutDesc8").innerHTML="This application served as a student attendance tracker, where students would scan a chip at a class screen, recording their name, date, and time upon scanning. The data was then seamlessly transmitted to a database, accessible for teachers on their end. This efficient system simplified attendance tracking, ensuring accurate and real-time recording of student attendance."
+        document.getElementById("aiTitle").innerHTML="Tic-Tac-Toe AI"
+        document.getElementById("aboutDesc9").innerHTML="In this assignment, we delved into the realm of AI, particularly through a Tic-Tac-Toe game featuring an AI opponent. The AI operates on the mini-max principle, calculating optimal moves by exploring all possible game states. By assigning positive values to favorable moves, it determines the easiest path to victory or a draw. Unlike other applications, this one doesn't require a database connection due to its nature. However, the attributes and objects are designed in a way that seamlessly integrates with a database, ensuring flexibility in future implementations. Prior to this, we had also developed a simpler version using a Rock-Paper-Scissors game.."
+        document.getElementById("imgTitle").innerHTML="Image-Sæider"
+        document.getElementById("aboutDesc10").innerHTML="Simple image slider. This was my very first project, however as its so simple this is just a temporary entry."
+        document.getElementById("proTitle").innerHTML="At the moment there's nothing planned for Java. Perhaps in the future but as of now im busy with projects in other languages."
+        document.getElementById("mapTitle").innerHTML="Oops, seems empty in here."
+        document.getElementById("mapDesc").innerHTML="mapDesc"
+        document.getElementById("conTitle").innerHTML="Learn more"
+    }
+
+
+</script>
+
+</body>
+</html>

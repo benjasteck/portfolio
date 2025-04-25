@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WackDonald's Login</title>
+    <link rel="stylesheet" href="stylephoto.css">
+    <link rel="icon" href="images/favicon.ico">
+    <script src="https://kit.fontawesome.com/6cff64fb2c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+
+
+            <ul id="sidemenu">
+                <img src="images/logoo.png" alt="" class="logo">
+                <li><a href="#home" id="headerHome">Home</a> </li>
+                <li><a href="#portfolio" id="headerPortfolio">Portfolio</a> </li>
+                <li><a href="#price" id="headerPrice">Price Listings</a> </li>
+                <li><a href="#about" id="headerAbout">About Me</a> </li>
+                <li><a href="#contact" id="headerContact">Contact</a> </li>
+
+            </ul>
+
+        </nav>
+        <div class="header-text">
+
+
+        </div>
+    </div>
+</div>
+<div class="headerTitle">
+    <h1 id="titleTitle">Your photographer and videographer</h1>
+    <div class="line"></div>
+    <h3>Welcome to <span>Ash Photography & Videography!</span> I'm Ash, a passionate photographer and videographer dedicated to capturing your most memorable moments. Whether it's a wedding, event, or a personal project, I bring a creative and professional touch to every shoot. Explore my portfolio below and let's create something beautiful together.</h3>
+</div>
+<div class="imageContainer">
+    <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+
+        <div class="kort" id="kort1">
+
+            <img class="image" src="images/CT+Maternity.jpg" draggable="false" onclick="expand(this.src)">
+            <div class="kortLayer" id="kortLayer1">
+                <h2 class="cardTitle" id="card1Title">Maternity Photos</h2>
+                <a href="#content" class="btn3" onclick="showNetflix()"><i class="fa-solid fa-angles-down"></i></a>
+            </div>
+        </div>
+        <div class="kort">
+            <img class="image" src="images/best-newborn-photographer-Dorset.jpg" draggable="false" onclick="expand(this.src)">
+            <div class="kortLayer">
+                <h2 class="cardTitle" id="card2Title">Baby portraits</h2>
+                <a href="#content" class="btn3" onclick="showTicket()"><i class="fa-solid fa-angles-down"></i></a>
+            </div>
+        </div>
+        <div class="kort">
+            <img class="image" src="images/toddler_photoshoot_tutorials.jpg" draggable="false" onclick="expand(this.src)">
+            <div class="kortLayer">
+                <h2 class="cardTitle" id="card3Title">Childrens Portraits</h2>
+                <a href="#content" class="btn3" onclick="showCat()"><i class="fa-solid fa-angles-down"></i></a>
+            </div>
+        </div>
+        <div class="kort">
+            <img class="image" src="images/how_to_create_a_great_family_portrait_photo.PNG" draggable="false" onclick="expand(this.src)">
+            <div class="kortLayer">
+                <h2 class="cardTitle" id="card4Title">Family/Group Portraits</h2>
+                <a href="#content" class="btn3" onclick="showItunes()"><i class="fa-solid fa-angles-down"></i></a>
+            </div>
+        </div>
+        <div class="kort">
+            <img class="image" src="images/wedding+videographer+pewdiepie+youtube.jpg" draggable="false" onclick="expand(this.src)">
+            <div class="kortLayer">
+                <h2 class="cardTitle" id="card5Title">Weddings</h2>
+                <a href="#content" class="btn3" onclick="showAtt()"><i class="fa-solid fa-angles-down"></i></a>
+            </div>
+        </div>
+        <div class="kort">
+            <img class="image" src="images/lander-business-event.jpg" draggable="false" onclick="expand(this.src)">
+            <div class="kortLayer">
+                <h2 class="cardTitle" id="card6Title">Business Events</h2>
+                <a href="#content" class="btn3" onclick="showAi()"><i class="fa-solid fa-angles-down"></i></a>
+            </div>
+        </div>
+        <div class="kort">
+            <img class="image" src="images/DSCF1918-Edit-1024x768.jpg" draggable="false" onclick="expand(this.src)">
+            <div class="kortLayer">
+                <h2 class="cardTitle" id="card7Title">Cosplays</h2>
+                <a href="#content" class="btn3" onclick="showImg()"><i class="fa-solid fa-angles-down"></i></a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="footer">
+    <p class="footerText">Ash Photography and Videography - Address: <span>idk street 62b London</span> - Telephone: <span>11223344</span> - E-mail: <span>Ash@idontcheckDCoften.uk</span></p>
+</div>
+
+<script>
+
+    function showNetflix(){
+
+        const contents = document.querySelectorAll('.content');
+        contents.forEach(content => {
+            content.style.transform = "translateY(-100%)";
+            content.style.opacity = "0";
+            content.style.height = "0";
+            content.style.transition = "none";
+        });
+
+
+
+
+        document.getElementById("netflixContent").style.transform="translateY(0px)";
+        document.getElementById("netflixContent").style.opacity="100%"
+        document.getElementById("netflixContent").style.height="100%";
+        document.getElementById("content").style.height="100%";
+        document.getElementById("netflixContent").style.transition = "transform 1.5s, height 1.5s, opacity 6s";
+
+
+    }
+
+    function showTicket(){
+        const contents = document.querySelectorAll('.content');
+        contents.forEach(content => {
+            content.style.transform = "translateY(-100%)";
+            content.style.opacity = "0";
+            content.style.height = "0";
+            content.style.transition = "none";
+        });
+
+
+
+        document.getElementById("ticketContent").style.transform="translateY(0px)";
+        document.getElementById("ticketContent").style.opacity="100%"
+        document.getElementById("ticketContent").style.height="100%";
+        document.getElementById("content").style.height="100%";
+        document.getElementById("ticketContent").style.transition = "transform 1.5s, height 1.5s, opacity 6s";
+
+
+    }
+    function showCat() {
+
+        const contents = document.querySelectorAll('.content');
+        contents.forEach(content => {
+            content.style.transform = "translateY(-100%)";
+            content.style.opacity = "0";
+            content.style.height = "0";
+            content.style.transition = "none";
+        });
+        document.getElementById("catContent").style.transform="translateY(0px)";
+        document.getElementById("catContent").style.opacity="100%"
+        document.getElementById("catContent").style.height="100%";
+        document.getElementById("content").style.height="100%";
+        document.getElementById("catContent").style.transition = "transform 1.5s, height 1.5s, opacity 6s";
+    }
+
+    function showItunes() {
+        const contents = document.querySelectorAll('.content');
+        contents.forEach(content => {
+            content.style.transform = "translateY(-100%)";
+            content.style.opacity = "0";
+            content.style.height = "0";
+            content.style.transition = "none";
+        });
+        document.getElementById("tunesContent").style.transform="translateY(0px)";
+        document.getElementById("tunesContent").style.opacity="100%"
+        document.getElementById("tunesContent").style.height="100%";
+        document.getElementById("content").style.height="100%";
+        document.getElementById("tunesContent").style.transition = "transform 1.5s, height 1.5s, opacity 6s";
+    }
+
+    function showAtt() {
+        const contents = document.querySelectorAll('.content');
+        contents.forEach(content => {
+            content.style.transform = "translateY(-100%)";
+            content.style.opacity = "0";
+            content.style.height = "0";
+            content.style.transition = "none";
+        });
+        document.getElementById("attContent").style.transform="translateY(0px)";
+        document.getElementById("attContent").style.opacity="100%"
+        document.getElementById("attContent").style.height="100%";
+        document.getElementById("content").style.height="100%";
+        document.getElementById("attContent").style.transition = "transform 1.5s, height 1.5s, opacity 6s";
+    }
+
+    function showAi() {
+        const contents = document.querySelectorAll('.content');
+        contents.forEach(content => {
+            content.style.transform = "translateY(-100%)";
+            content.style.opacity = "0";
+            content.style.height = "0";
+            content.style.transition = "none";
+        });
+        document.getElementById("aiContent").style.transform="translateY(0px)";
+        document.getElementById("aiContent").style.opacity="100%"
+        document.getElementById("aiContent").style.height="100%";
+        document.getElementById("content").style.height="100%";
+        document.getElementById("aiContent").style.transition = "transform 1.5s, height 1.5s, opacity 6s";
+    }
+
+    function showImg() {
+        const contents = document.querySelectorAll('.content');
+        contents.forEach(content => {
+            content.style.transform = "translateY(-100%)";
+            content.style.opacity = "0";
+            content.style.height = "0";
+            content.style.transition = "none";
+        });
+        document.getElementById("imgContent").style.transform="translateY(0px)";
+        document.getElementById("imgContent").style.opacity="100%"
+        document.getElementById("imgContent").style.height="100%";
+        document.getElementById("content").style.height="100%";
+        document.getElementById("imgContent").style.transition = "transform 1.5s, height 1.5s, opacity 6s";
+    }
+
+
+
+
+
+    const track = document.getElementById("image-track");
+    let isDragged = false;
+
+    window.onmousedown = e =>{
+        track.dataset.mouseDownAt = e.clientX;
+
+
+    }
+
+
+    window.onmousemove = e => {
+        if (track.dataset.mouseDownAt === "0") return;
+
+
+        const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX, maxDelta = window.innerWidth / 2;
+        const percentage = (mouseDelta / maxDelta) * -100,
+            nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
+            nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -64);
+        track.dataset.percentage = nextPercentage;
+
+        if (Math.abs(mouseDelta) >= 1) {
+            isDragged = true;
+        }
+
+        track.animate({
+            transform: `translate(${nextPercentage}%, 0%)`
+        }, {duration: 3000, fill: "forwards"});
+
+        for (const image of track.getElementsByClassName("image")) {
+            image.animate({
+                objectPosition: `${100 + nextPercentage}% center`
+            }, {duration: 3000, fill: "forwards"});
+        }
+    }
+
+
+    window.onmouseup = () =>{
+
+        if (isDragged !== false) {
+            track.dataset.mouseDownAt = "0";
+            track.dataset.prevPercentage = track.dataset.percentage;
+        }
+        else
+            track.dataset.mouseDownAt = "0";
+    }
+</script>
+</body>
+</html>
