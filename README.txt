@@ -1,0 +1,1 @@
+mangler en del har ikke nået en masse finpudsing så hvis noget ikke gør noget så er det fordi jeg ikke fik det lavet i tide
