@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WackDonald's Login</title>
+    <link rel="stylesheet" href="styleChatsy.css">
+    <link rel="icon" href="images/favicon.ico">
+    <script src="https://kit.fontawesome.com/6cff64fb2c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="center" id="centerForm">
+    <h1 id="title">Login</h1>
+    <img src="images/logodarkr.PNG" class="logo" id="logoImg">
+    <form method="post" onsubmit="return login()">
+        <div class="txt_field">
+            <input type="text" required id="usernameText" autocomplete="off">
+            <label id="username">Username</label>
+        </div>
+        <div class="txt_field">
+            <input type="password" required id="passwordText">
+            <label id="password">Password</label>
+        </div>
+        <div id="buttons">
+            <div class="pass">
+                Register
+            </div>
+            <div class="pass inactive">
+                |
+            </div>
+        <div class="pass" onclick="myFunction()">Forgot Password?
+            <span class="popuptext" id="myPopup">Not implemented. contact me on discord, heinrich_n1</span>
+        </div>
+</div>
+        <input type="submit" value="Login" onclick="login()">
+    </form>
+
+
+
+</div>
+<script>
+    // When the user clicks on div, open the popup
+    function myFunction() {
+        var pass = document.getElementById("myPopup");
+        pass.classList.toggle("show");
+    }
+    function login() {
+        // Get the values of the username and password fields
+        var username = document.getElementById("usernameText").value;
+        var password = document.getElementById("passwordText").value;
+
+        // Check if the entered username and password are both "user"
+        if (username === "user" && password === "user") {
+            // Redirect to User.html
+            window.location.href = "User.html";
+            return false; // Prevent form submission
+        }
+       else if((username === "chef" && password === "chef")) {
+            window.location.href = "ChefScreen.html";
+            return false;
+        }
+        else if((username === "admin" && password === "admin")) {
+            window.location.href = "AdminScreen.html";
+            return false;
+        }
+        else {
+            // Add any other login validation logic here
+            // For now, just display an alert
+            alert("Invalid username or password. Please try again.");
+            return false; // Prevent form submission
+        }
+    }
+    function checkTimeAndPerformAction() {
+        var logo = document.getElementById("logoImg");
+        var center = document.getElementById("centerForm")
+        var title = document.getElementById("title")
+        var user = document.getElementById("username")
+        var pass = document.getElementById("password")
+        var usertext = document.getElementById("usernameText")
+        var passtext = document.getElementById("passwordText")
+        // Get the current date and time
+        const currentDate = new Date();
+
+        // Get the current hour (in 24-hour format)
+        const currentHour = currentDate.getHours();
+
+        // Check if the current hour is between 8 am and 8 pm
+        if (currentHour >= 8 && currentHour < 20) {
+            // Code to execute if the current time is between 8 am and 8 pm
+            console.log("It's daytime!");
+            document.body.style.backgroundImage = 'url("images/ryan-haight-bullet-train.gif")';
+            logo.src = 'images/logolightR.PNG'
+            logo.style.filter = 'drop-shadow(0 0 2rem #ffffff)'
+            center.style.background = 'linear-gradient(-225deg, #d9faf5 0%, #fadcf4 100%)';
+            center.style.borderColor = '#333333'
+            title.style.color = '#333333'
+            user.style.color = '#333333'
+            pass.style.color = '#333333'
+            usertext.style.color = '#212122'
+            passtext.style.color = '#212122'
+
+            // Add more code for daytime actions here
+        } else {
+            // Code to execute if the current time is outside the range of 8 am to 8 pm
+            console.log("It's nighttime!");
+            document.body.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/RnwnIzX.gif")';
+            logo.src = 'images/logodarkr.PNG'
+            logo.style.filter = 'drop-shadow(0 0 2rem #4a4c4e)'
+            center.style.background = 'linear-gradient(109.6deg, rgba(36, 45, 57, 0.9) 11.2%, rgba(16, 37, 60, 1) 51.2%, rgba(0, 0, 0, 0.9) 98.6%)';
+            center.style.borderColor = 'rgb(36, 45, 57)';
+            // Add more code for nighttime actions here
+        }
+    }
+    checkTimeAndPerformAction();
+</script>
+</body>
+</html>
