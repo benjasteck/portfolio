@@ -9,7 +9,7 @@ const observer = new IntersectionObserver((entries) => {
                 const index = Array.from(target.parentNode.children).indexOf(target);
                 const totalElements = target.parentNode.children.length;
                 const reverseIndex = totalElements - 1 - index; // Reverse the index
-                target.style.transitionDelay = `${reverseIndex * 200}ms`; 
+                target.style.transitionDelay = `${reverseIndex * 150}ms`; 
                 target.classList.add('show');
                 }
             } 

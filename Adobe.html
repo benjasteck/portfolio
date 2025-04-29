@@ -17,7 +17,7 @@
 
         <ul id="sidemenu">
             <li><a href="index.html" id="headerHome"><i class="fa-solid fa-arrow-left"></i>Return To Main</a> </li>
-            <li><a href="#card" id="headerAbout">Java Projects</a> </li>
+            <li><a href="#pastProjects" id="headerAbout">Past Projects</a> </li>
             <li><a href="#portfolio" id="headerProject">Future Projects</a> </li>
             <li><a href="#contact" id="headerContact">Contact</a> </li>
             <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
@@ -47,7 +47,7 @@
 });</script>
 
 
-<div class="imageContainer">
+<div class="imageContainer" id="pastProjects">
     <h1 class="subtitle" id="contentTitle"> Past Projects</h1>
 <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
 
@@ -111,128 +111,84 @@
 <div id="content">
     <div class="content" id="netflixContent">
     <div class="contentContainer">
-        <h1 class="subtitleContent" id="netflixTitle">  Netflix Clone</h1>
+        <h1 class="subtitleContent" id="netflixTitle">  My video CV</h1>
         <div class="row1">
             <div class="content-col-1">
-                <p class="aboutDesc" id="aboutDesc">As a pivotal early project, we undertook the development of a Netflix-inspired application with a primary emphasis on the backend functionality. In this project, our goal was not only to construct a simple and intuitive user interface but also to demonstrate the depth of our backend expertise encompassing database management and intricate logic.
-                    <br><br>
-                    The application commenced with a database housing two default movies, serving as a foundational starting point. To foster user engagement, we implemented a feature allowing users to effortlessly expand the movie collection by adding their own selections. This flexibility extended to the ability to categorize movies according to the user's preferences, effectively personalizing their virtual streaming library.
-                    <br><br>
-                    Moreover, our system offered a comprehensive editing capability. Users had the autonomy to modify various aspects of each movie entry, such as altering titles or adjusting ratings, providing them with a tailored and dynamic movie management experience. This assignment not only showcased our backend prowess but also illustrated our dedication to user-friendly design and interactive functionality.</p>
+                <p class="aboutDesc" id="aboutDesc">A short video CV showing me, who i am and my past experience.</p>
             </div>
             <div class="content-col-2">
-                <img class="contentimg" src="images/card12.PNG">
+                
+                <video class="contentVid" src="images/cvvideo.mp4" controls></video>
             </div>
     </div>
-        <div class="row1">
-            <div class="content2-col-1">
-                 <p class="aboutDesc" id="aboutDesc2">Reflecting on this project, it stands out as a pivotal moment in my programming journey. I undertook the development of an application that demanded the creation of intricate features. One of these was a dynamic search bar, offering users the ability to fine-tune their searches with options for categories or movie names. This not only showcased my problem-solving skills but also significantly enhanced the application's user-friendliness.
-                    <br><br>
-                    Another noteworthy achievement was the successful implementation of synchronized video player controls, including a slider to navigate through videos seamlessly. This addition not only enriched the user experience but also required mastering complex logic.
-                    <br><br>
-                    Furthermore, the project served as a comprehensive exploration of SQL. It afforded hands-on experience in various aspects, such as creating, updating, and deleting entries within the database. The understanding of key relationships to connect movies with categories added depth to my SQL proficiency.
-                    <br><br>
-                    In summary, this project was more than just an assignment; it was a transformative learning journey. It broadened my technical expertise, honed my problem-solving abilities, and deepened my appreciation for the multifaceted nature of software development</p>
-                <div class="social-icons">
-                    <h2>Code: <a href=""><i class="fa-brands fa-github"></i></a></h2>
-                </div>
-            </div>
-            <div class="content2-col-2">
-                <img class="contentimg" src="images/card111.PNG">
-               
-            </div>
-        </div>
     </div>
 </div>
 
     <div class="content" id="ticketContent">
         <div class="contentContainer">
-            <h1 class="subtitleContent" id="ticketTitle">  Event Manager</h1>
+            <h1 class="subtitleContent" id="ticketTitle">  InDesign</h1>
             <div class="row1">
-                <div class="content-col-1">
-                    <p class="aboutDesc" id="aboutDesc3">In a major project, I created a Ticket Master system with three distinct roles: customers, event coordinators, and admins. Admins had the unique ability to create other admins and coordinators, sharing similar capabilities. Coordinators oversaw event management and customer orders, while customers could seamlessly purchase tickets.
+                <div class="content-col-1 hidden">
+                    <p class="aboutDesc" id="aboutDesc3">In a major UX project, we were tasked with following a full design process to conceptualize and develop an app. For our project, we selected an existing football club with the goal of modernizing their brand and online presence through the creation of a new, user-friendly mobile application.
                         <br><br>
-                        The project's core challenge was implementing a robust authentication system, ensuring secure transactions. This emphasis on data security significantly deepened my understanding of user role management. It highlighted the critical nature of secure transactions in software development, enriching my overall knowledge in the domain.
+                        We began the project by brainstorming initial ideas for the app, as illustrated to the left. This phase involved documenting every potential feature we believed could enhance the user experience. Through extensive market analysis and research into the habits and expectations of the potential user base, we refined our ideas to focus on what was truly essential.
                         <br><br>
-                        This experience broadened my expertise in developing user-oriented systems and reinforced the significance of safeguarding data integrity. It served as a valuable lesson, shaping my approach towards secure and user-friendly software solutions.
-                        <br><br>
-                        The outcome of this process involved customers adding their information to the event coordinators' database. A sample ticket, displayed to the right, showcases details like name and start date. This seamless integration of customer data into the system and the structured ticket format marked the successful culmination of the project.</p>
+                        The final concept aimed to match the core features offered by competitors—such as access to club news, match statistics, and ticket management—while also introducing a unique element: the integration of a universal QR code system. This innovation would allow users to scan a single QR code to manage tickets, season cards, in-app sales, and more, significantly improving convenience and streamlining the user experience. This focus on differentiation and practicality became a central part of the app’s identity.    
+                    </p>
                 </div>
-                <div class="content-col-2">
-                    <img class="contentimg" src="images/card22.png">
+                <div class="content-col-2 hidden2">
+                    <img class="contentimg" src="images/efb1.jpg">
                 </div>
             </div>
-            <img class="contentimgbig" src="images/card23.png">
-            <p class="aboutDescbig" id="aboutDescbig1">In the image above, customers navigated a clear ticket ordering interface. In this snapshot, unedited by coordinators,
-                the labels are visible, ready for customization. This illustrates the coordinator's ability to uniquely tailor event tickets.
-                While I aimed for a polished design using FXML, the focus remained on functionality, not aesthetics, reflecting the grading criteria.
-                The limited timeframe led to prioritizing functionality over aesthetics, resulting in a polished main screen and ticket interface but everything else being basic.
-                Investing more time in interface design wouldn't have impacted the grade significantly, hence the focus on core functionality.</p>
             <div class="row1">
-                <div class="content2-col-1">
-                    <img class="contentimg" src="images/card21.png">
+                <div class="content2-col-1 hidden">
+                    <img class="contentimg" src="images/efb2.png">
                 </div>
-                <div class="content2-col-2">
+                <div class="content2-col-2 hidden2">
 
-                    <p class="aboutDesc" id="aboutDesc4">In the image to the left, customers encountered a central display of events, complemented by a login button and a search bar.<br> The project's success was underscored by flawless authentication implementation, the paramount objective in this endeavor.
+                    <p class="aboutDesc" id="aboutDesc4">Through additional analysis, we identified the key pain points and struggles experienced by potential users. This allowed us to refine our concept further by introducing new features that addressed these challenges and removing redundant elements that did not add value to the user experience. By utilizing models like the one shown to the right, we were able to clearly assess which features made sense to include and which should be discarded.
                         <br><br>
-                        Reflecting on this project, it was pivotal in teaching me authentication intricacies. It also familiarized me with the MVC pattern and the implementation of GoF design patterns, particularly Singleton. Beyond technical aspects, the project provided valuable exposure to client-coder relationships, emphasizing the significance of meticulous planning for meetings and sprints.
-                        <br><br>
-                        Utilizing tools like Trello streamlined our task management, enabling efficient task assignment among group members. This experience not only enhanced my technical skills but also honed my collaboration and project management abilities, preparing me for future, client-oriented software development endeavors.</p>
-                    <div class="social-icons">
-                        <h2>Code: <a href=""><i class="fa-brands fa-github"></i></a></h2>
-                    </div>
+                        Building on this foundation, we moved into more detailed stages of development, conducting targeted user research and constructing a comprehensive information architecture for the app. To guide our decisions and maintain a user-centered approach, we created detailed personas based on our research, one of which is presented in the image below. This persona helped ensure that every design choice aligned with the needs, goals, and behaviors of the intended user base. </p>
+                    
                 </div>
             </div>
+            <div class="imagerow2">
+              <div class="contentimgbig hidden">
+                <img class="contentimg" src="images/efb4.png">
+            </div>
+            <div class="contentimgbig hidden2">
+                <img class="contentimg" src="images/efb3.png">
+            </div>  
+            </div>
+            
+            <div class="row1">
+                <div class="content2-col-1 hidden">
+                    <p class="aboutDesc" id="aboutDesc41">As part of the project, we also developed a Business Model Canvas to outline the value proposition of the app in relation to the required resources and financial investment. This strategic tool was essential for communicating the business viability of the concept—particularly when presenting it to stakeholders or potential funders.
+                        <br><br>
+                        The canvas helped us clearly demonstrate how the app could generate value and, ultimately, profit. Two key insights emerged from this analysis. First, the app’s ability to collect user data could open up opportunities for monetization through targeted marketing and potential data partnerships. Second, the app would enhance user engagement on match days—not only by encouraging more fans to attend games, but also by driving increased spending at the stadium through exclusive in-app offers and sales. These factors strengthened the overall business case for the app and highlighted its potential for long-term sustainability.</p>
+                </div>
+                <div class="content2-col-2 hidden2">   
+                    <p class="aboutDesc" id="aboutDesc42">All of the analyses and models presented here—along with several additional ones—contributed to the creation of a cohesive brand identity and a complete wireframe for the app. These steps ensured that the final product not only aligned with the football club’s existing image but also delivered a user experience tailored to the needs and expectations of its fan base.
+                        <br><br>
+                        Ultimately, we compiled all components of the project into a single, comprehensive sketch board, which can be seen below. This board brings together every element of our process—from initial brainstorming to final wireframes—organized in a clean, visually consistent layout that reflects the same design principles used throughout the app itself. It serves as both a summary and a visual presentation of the full UX journey from concept to near-completion. </p>
+                </div>
+            </div>
+            <img class="contentimg hidden" src="images/CaSRGGFEpture.PNG">
         </div>
     </div>
 
     <div class="content" id="catContent">
         <div class="contentContainer">
-            <h1 class="subtitleContent" id="catTitle">  Categorization Application</h1>
+            <h1 class="subtitleContent" id="catTitle">  Photoshop</h1>
             <div class="row1">
-                <div class="content-col-2">
-                    <img class="contentimg" src="images/card31.png">
+                <div class="content-col-1 hidden">
+                    <p class="aboutDesc" id="aboutDesc5">By now, I have gained substantial hands-on experience with Adobe Photoshop. My work has included everything from basic photo retouching to more advanced tasks such as seamlessly blending multiple images using layer masks. I would consider myself at an intermediate level, and I’m confident in my ability to quickly learn and adapt to new tools or techniques as needed. My approach is both creative and efficient, ensuring high-quality results across a range of visual editing tasks.
+                        <br><br> 
+                        I've used Photoshop in both academic and professional contexts—for example, preparing visuals for UX presentations, creating marketing material mockups, and editing assets for websites and social media. I'm also comfortable integrating Photoshop into broader design workflows, including using it alongside tools like Illustrator, Figma, or After Effects when needed.
+                    </p>
                 </div>
-                <div class="content-col-2">
-                    <img class="contentimg" src="images/card32.png">
-                </div>
-                <p class="aboutDesc" id="aboutDescbig2">As part of our exam project, we developed an application tailored for student use, enabling the classification and categorization of fictional patients across various categories and sub-categories. The system featured distinct roles: admin, teacher, and student.
-                    <br><br>
-                    Administrators held the authority to create other admins and teachers, establishing a hierarchical structure. Teachers, in turn, could generate patients and link students to these cases. Notably, teachers possessed the capability to create templates, streamlining the process of generating multiple unique patients for different student groups within a class.
-                    <br><br>
-                    Students accessed the system to view their assigned patients, delve into patient details, and contribute to their reports. The image above displays the intuitive report interface, comprising various categories and subcategories for detailed information editing.
-                    This project not only demonstrated our technical skills but also emphasized user roles and seamless data management, offering a comprehensive solution for educational purposes.</p>
-            </div>
-            <div class="row1">
-                <div class="content-col-1">
-                    <p class="aboutDesc" id="aboutDesc5">This project was a collaborative effort with SOSU, a school specializing in social and health education, where nursing and patient care are central. SOSU served as our client, leading to structured sprint meetings. They played a pivotal role in design decisions and functionality, shaping the project's direction and ensuring its alignment with real-world healthcare needs.
-                        <br><br>
-                        In the image to the left, students access the application, finding a list of their assigned patients. Clicking on a patient reveals detailed information. The two buttons in the lower left corner lead them to the corresponding screens displayed at the top, facilitating smooth navigation and enhancing user experience.
-                        <br><br>
-                        The deliberate choice of having appropriately sized buttons and text, along with detailed explanations for every feature, reflects our intentional design. Simplicity was paramount for our client, leading us to ensure clarity in every aspect. Moreover, the inclusion of question marks next to titles allows students to access detailed explanations, enhancing user understanding and engagement with the application.</p>
-                </div>
-                <div class="content-col-2">
-                    <img class="contentimg" src="images/card34.png">
-                </div>
-            </div>
-            <div class="row1">
-                <div class="content2-col-1">
-                    <img class="contentimg" src="images/card33.png">
-                </div>
-                <div class="content2-col-2">
-
-                    <p class="aboutDesc" id="aboutDesc6">In the teacher's view, depicted here, the process of assigning students to patients is simplified. Teachers can effortlessly sort and search for patients, select students, and establish connections with a simple click. The interface features three columns, allowing seamless management.
-                        <br><br>
-                        Additionally, teachers have the option to create templates, essentially opening the categorization screen shown in the images at the top. In this screen, teachers can input pre-made data, save it, and apply it to new patients or multiple unique patients, streamlining the data entry process effectively.
-                        <br><br>
-                        The application's complexity was substantial, involving multiple objects with diverse properties like students, teachers, admins, patients, and templates. To manage this complexity, adhering to programming principles was crucial. We meticulously followed these principles in class and method design, ensuring effective communication between classes and maintaining coherent naming conventions.
-                        <br><br>
-                        This experience proved invaluable in steering clear of tangled and convoluted code. By embracing structured practices, we successfully avoided spaghetti code, ensuring the application's robustness and maintainability.
-                        In summary, this project was vast, demanding a level of internal planning we hadn't previously encountered. It challenged us to new heights, emphasizing the importance of meticulous organization and structured development methodologies. Navigating this complexity provided invaluable insights, refining our approach to future large-scale endeavors.</p>
-                    <div class="social-icons">
-                        <h2>Code: <a href=""><i class="fa-brands fa-github"></i></a></h2>
-                    </div>
+                <div class="content-col-2 hidden2">
+                    <img class="contentimg" src="images/yk1udjixfob31.jpg">
                 </div>
             </div>
         </div>
@@ -240,16 +196,17 @@
 
     <div class="content" id="tunesContent">
         <div class="contentContainer">
-            <h1 class="subtitleContent" id="tunesTitle">  Itunes Clone</h1>
+            <h1 class="subtitleContent" id="tunesTitle">  Illustrator</h1>
             <div class="row1">
-                <div class="content2-col-1">
-                    <img class="contentimg" src="images/card41.png">
+                <div class="content2-col-1 hidden">
+                    <img class="contentimg" src="images/illIcon.jpg">
                 </div>
-                <div class="content2-col-2">
-                    <p class="aboutDesc" id="aboutDesc7">This application shares similarities with the movie collection project, functioning as a file categorization system, specifically for MP3 files. Users can add songs and freely categorize and edit them, mirroring the movie application's functionality. These customized categories, titles, and other details are stored in a database, enhancing user organization and accessibility.</p>
-                    <div class="social-icons">
-                        <h2>Code: <a href=""><i class="fa-brands fa-github"></i></a></h2>
-                    </div>
+                <div class="content2-col-2 hidden2">
+                    <p class="aboutDesc" id="aboutDesc7">I have worked extensively with Adobe Illustrator, creating a range of visuals both for personal enjoyment and for practical use in school and personal projects. Examples include designing custom icons—such as the home icon shown in the image—as well as producing artwork and graphical assets for various applications.
+                        <br><br> 
+                        I am familiar with many of Illustrator’s core tools and techniques, including vector drawing, path editing, and working with typography and color systems. I feel confident in my ability to quickly master any additional features as needed, allowing me to adapt flexibly to different types of design work.
+
+                    </p>
                 </div>
             </div>
         </div>
@@ -257,30 +214,32 @@
 
     <div class="content" id="attContent">
         <div class="contentContainer">
-            <h1 class="subtitleContent" id="attTitle">  Attendance System</h1>
+            <h1 class="subtitleContent" id="attTitle">  Logo Development</h1>
             <div class="row1">
-                <div class="content-col-1">
-                    <p class="aboutDesc" id="aboutDesc8">This application served as a student attendance tracker, where students would scan a chip at a class screen, recording their name, date, and time upon scanning. The data was then seamlessly transmitted to a database, accessible for teachers on their end. This efficient system simplified attendance tracking, ensuring accurate and real-time recording of student attendance.</p>
+                <div class="content-col-1 hidden">
+                    <p class="aboutDesc" id="aboutDesc8">I have experience in logo development, working across personal projects and academic assignments. My process typically begins with hand-drawn sketching to explore a wide range of concepts and visual directions before moving into digital refinement. I place a strong emphasis on ensuring that each logo communicates the brand’s core identity clearly and memorably.
+                        <br><br> 
+                        When developing logos, I focus on creating designs that are scalable, versatile, and timeless. I often incorporate classic design principles such as balance, proportion, and the use of frameworks like the golden ratio or grid systems to achieve visual harmony and structural integrity. Throughout the process, I work iteratively—moving from rough sketches to polished vector designs in Illustrator—while ensuring that feedback is integrated thoughtfully. My goal is always to deliver logos that not only look striking but also function effectively across different platforms, from digital applications to print materials.
+
+
+                    </p>
                 </div>
-                <div class="content-col-2">
-                    <img class="contentimg" src="images/card51.png">
+                <div class="content-col-2 hidden2">
+                    <img class="contentimg" src="images/logoDes.jpg">
                 </div>
             </div>
-            <img class="contentimgbig" src="images/card52.png">
         </div>
     </div>
     <div class="content" id="aiContent">
         <div class="contentContainer">
-            <h1 class="subtitleContent" id="aiTitle">  Tic-Tac-Toe AI</h1>
+            <h1 class="subtitleContent" id="aiTitle">  Pamphlet Design</h1>
             <div class="row1">
-                <div class="content2-col-1">
-                    <img class="contentimg" src="images/card61.png">
+                <div class="content2-col-1 hidden">
+                    <img class="contentimg" src="images/paperin.PNG">
                 </div>
-                <div class="content2-col-2">
-                    <p class="aboutDesc" id="aboutDesc9">In this assignment, we delved into the realm of AI, particularly through a Tic-Tac-Toe game featuring an AI opponent. The AI operates on the mini-max principle, calculating optimal moves by exploring all possible game states. By assigning positive values to favorable moves, it determines the easiest path to victory or a draw. Unlike other applications, this one doesn't require a database connection due to its nature. However, the attributes and objects are designed in a way that seamlessly integrates with a database, ensuring flexibility in future implementations. Prior to this, we had also developed a simpler version using a Rock-Paper-Scissors game.</p>
-                    <div class="social-icons">
-                        <h2>Code: <a href=""><i class="fa-brands fa-github"></i></a></h2>
-                    </div>
+                <div class="content2-col-2 hidden2">
+                    <p class="aboutDesc" id="aboutDesc9">As part of a project, we designed a promotional pamphlet for the city of Esbjerg, with two sample pages shown in the image. This was one of my first major projects utilizing both Adobe InDesign and Illustrator in combination. Despite being relatively new to the tools at the time, my creativity, attention to detail, and determination to deliver a high-quality product resulted in a strong and cohesive final piece. The project highlights not only my early technical development but also my natural drive to achieve professional results through thoughtful layout, typography, and visual storytelling.</p>
+                
                 </div>
             </div>
         </div>
