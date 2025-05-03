@@ -9,10 +9,101 @@
     <script src="https://kit.fontawesome.com/6cff64fb2c.js" crossorigin="anonymous"></script>
     <script defer src="hideShow.js"> </script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
 <body>
     <div id="app">
 <div id="header">
+    <div class="headerBackgroundMask">
+     <img class="backgroundImg" src="images/greenBackground.png" alt=""> 
+     <div class="modelWrapper"> 
+     <model-viewer
+     id="laptopModel"
+      src="Laptop_High-Polay_HP_cycles_blend.glb"
+      alt="3D laptop"
+      camera-controls disable-zoom disable-pan disable-tap
+      interpolation-decay="200"
+      interaction-prompt="none"
+      camera-orbit="45deg 55deg 50m"
+      exposure="1.0"
+  shadow-intensity="3"
+      onLoad="handleModelLoad()"
+      style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+      "
+    ></model-viewer>
+    <script>
+  function handleModelLoad() {
+  const modelViewer = document.querySelector('#laptopModel');
+  console.log('Model loaded!');
+  
+  let angle = 40;
+  const initialAngle = angle;  // Track initial angle
+  let elevation = 60;
+  const initialElevation = elevation;  // Track initial elevation
+  let tick = 0;
+  let radius = 50; // Starting radius is 50m
+  const minRadius = 5; // Minimum radius (object gets closer)
+  const maxRadius = 50; // Max radius (starting distance)
+
+  modelViewer.cameraOrbit = `${angle}deg ${elevation}deg ${radius}m`;
+  modelViewer.jumpCameraToGoal();
+
+  setTimeout(() => {
+    const interval = setInterval(() => {
+      const elevationOscillation = 50 * Math.sin(tick / 50);
+      const angleIncrement = 2 + (14 * Math.min(tick / 20, 1)); // Speed up rotation
+
+      angle = (angle + angleIncrement) % 360;
+      elevation = 60 + elevationOscillation;
+
+      // Decrease radius after tick 10
+      
+      modelViewer.cameraOrbit = `${angle}deg ${elevation.toFixed(2)}deg ${radius.toFixed(2)}m`;
+      modelViewer.jumpCameraToGoal();
+
+      tick++;
+
+      // Slow down and return to initial position after 3 seconds
+      if (tick > 142) { // After 175 ticks (about 5.25 seconds in total)
+        clearInterval(interval);  // Stop the main animation loop
+
+        // Start the return transition phase
+        let returnTick = 0;
+        const returnInterval = setInterval(() => {
+          // Gradually return angle and elevation to initial values
+          const returnAngle = angle - (angle - initialAngle) * 0.1; // Slow down angle return
+          const returnElevation = elevation - (elevation - initialElevation) * 0.1; // Slow down elevation return
+
+          // Apply the updated camera orbit
+          modelViewer.cameraOrbit = `${returnAngle.toFixed(2)}deg ${returnElevation.toFixed(2)}deg ${radius.toFixed(2)}m`;
+          modelViewer.jumpCameraToGoal();
+            console.log(returnAngle)
+          returnTick++;
+
+          if (returnTick > 500) { // After 30 ticks, stop returning
+            clearInterval(returnInterval);
+            console.log("Return transition complete");
+          }
+        }, 50); // 50ms for smoother transition back
+      }
+    }, 30); // ~30 FPS for main animation
+  }, 1300); // 1.1s delay before starting
+}
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('header').classList.add('headerExpanded');
+  }, 5000);
+}); 
+      </script>
+</div> 
+    </div>
+    
 <div class="container">
     <nav>
         <img src="images/logo.png" class="logo">
@@ -34,17 +125,45 @@
 
         <i class="fa-solid fa-bars" onclick="openmenu()"></i>
     </nav>
-    <div class="header-text">
-        <p class="headerTitle">{{texts.headerTitle}}</p>
-        <h1 id="headerDesc" v-html="texts.headerDesc">{{texts.headerDesc}}</h1>
-    </div>
+    <div class="header-text-container">
+        <div class="header-text">
+          <p class="headerTitle" v-html="texts.headerTitle">{{texts.headerTitle}}</p>
+          <h1 id="headerDesc" v-html="texts.headerDesc">{{texts.headerDesc}}</h1>
+        </div>
+      </div>
+      <div class="headerBottomText">
+        <h3>Design, Code, Detail</h3>
+        <p>My mission when designing and coding<br> is to be unique and challange norms</p>
+      </div>
+      <div class="HeaderBottomTextMid">
+        <p>Explore more</p>
+      </div>
+      <div class="glassParts">
+        <div class="glass1">
+            <h3>MY CRAFT</h3>
+            <h4>Design. Code. Deliver.</h4>
+            <p>UX/UI Design · Frontend Dev · Branding
+                Photoshop · Illustrator · Figma · React
+                Node.js · SQL · Fullstack Projects</p>
+        </div>
+        <div class="glass2">
+            <video src="images/Sequence 01.mp4" class="glassVid" autoplay muted loop playsinline></video>
+        </div>
+      </div>
 </div>
 </div>
-
+<script>
+   document.addEventListener("DOMContentLoaded", () => {
+  const video = document.querySelector(".glassVid");
+  video.play().catch(e => {
+    console.warn("Autoplay failed:", e);
+  });
+});
+  </script>
 
 
 <div id="about">
-<div class="container">
+<div class="container2">
 <div class="row">
     <div class="about-col-1">
         <img src="images/migselv.png" class="hidden">
@@ -88,7 +207,7 @@
 
 
 <div id="services">
-    <div class="container">
+    <div class="container2 scroll-item">
         <h1 class="subtitle" id="portTitle">{{texts.portTitle}}</h1>
         <div class="services-list" >
             <div class="services hidden">
@@ -113,14 +232,35 @@
     </div>
 </div>
 <script>
+    document.addEventListener("scroll", () => {
+    const items = document.querySelectorAll('#services .scroll-item');
+    const windowHeight = window.innerHeight;
+
+    items.forEach(item => {
+      const rect = item.getBoundingClientRect();
+
+      if (rect.top < windowHeight) {
+        // Animate upward based on scroll position
+        const offset = (rect.top - windowHeight) / 19;
+item.style.transform = `translateY(${offset}px)`;
+        item.style.transform = `translateY(${offset}px)`;
+      }
+    });
+  });
+  </script>
+  
+<script>
+
+
+
     document.querySelectorAll('.services-list .services').forEach((el, i) => {
-    el.style.transitionDelay = `${i * 200}ms`;
+    
 });
 </script>
 
 
 <div id="portfolio" class="hidden">
-    <div class="container">
+    <div class="container2">
         <h1 class="subtitle" id="proTitle">{{texts.proTitle}}</h1>
         <div class="work-list">
             <div class="work">
@@ -157,7 +297,7 @@
 
 
 <div id="contact" >
-    <div class="container">
+    <div class="container2">
         <div class="row">
             <div class="contact-left hidden">
                 <h1 class="subtitle" id="conTitle">{{texts.conTitle}}</h1>
@@ -229,6 +369,9 @@
     data() {
       return {
         currentLang: 'en',
+        isExpanded: false,
+        overriddenDesc: null,
+        overriddenTitle: null,
         langs: {
           en: {
             headerHome: "Home",
@@ -236,8 +379,8 @@
             headerPortfolio: "Portfolio",
             headerProj: "Projects",
             headerContact: "Contact",
-            headerTitle: "Multimedia Designer",
-            headerDesc: "Hi, I'm <span>Benjamin</span> currently pursuing<br> a degree in Multimedia Design in Denmark.<br> This is my personal portfolio",
+            headerTitle: "BENJAMIN STECKMETZ",
+            headerDesc: "Hi, I'm <span>Benjamin</span> A Multimedia Design student based in Denmark, <br>turning ideas into digital work. This is where I share my best projects and progress.<br> Design. Direction. Detail.",
             aboutTitle: "About Me",
             aboutDesc: "Hello, I'm Benjamin, i study Multimedia Design in Denmark and I have ambitious plans to pursue a web development course ontop. My work is characterized by a strong ethic, and I take pride in approaching tasks with thoroughness and dedication. I have been engaged in employment since the age of 13, and I even took a full year off between high school and college to gain valuable full-time work experience. Please don't hesitate to reach out to me using the contact application I've provided at the bottom of this page. Kind regards, Benjamin.",
             skillHeader: "Skills",
@@ -324,10 +467,15 @@
     },
     
     computed: {
-      texts() {
-        return this.langs[this.currentLang]
-      }
-    },
+  texts() {
+    const langContent = this.langs[this.currentLang];
+    return {
+      ...langContent,
+      headerDesc: this.overriddenDesc || langContent.headerDesc,
+      headerTitle: this.overriddenTitle || langContent.headerTitle
+    };
+  }
+},
     methods: {
       setLanguage(lang) {
         this.currentLang = lang
@@ -353,8 +501,23 @@ isValidEmail(email) {
   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return re.test(email);
 }
-    }
-    
+    },
+    mounted() {
+  setTimeout(() => {
+    this.isBlurred = true; // Start blur at 5s
+  }, 5000);
+setTimeout(() => {
+    this.isBlurred = false; // Remove blur much later
+  }, 6000); // e.g., remove blur after 10 seconds
+  setTimeout(() => {
+    this.isExpanded = true; // Change text at 6s (while still blurred)
+  }, 6000);
+  setTimeout(() => {
+    this.overriddenTitle = "BENJAMIN<br>STECKMETZ"
+    this.overriddenDesc = `Hi, I'm <span>Benjamin</span> A Multimedia Design student based in <br>Denmark, turning ideas into digital work. <br>This is where I share my best projects and progress.`;
+  }, 5500);
+  
+}
 
 
   }).mount('#app')

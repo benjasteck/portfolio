@@ -4,17 +4,9 @@ const observer = new IntersectionObserver((entries) => {
 
         if (entry.isIntersecting) {
             // If it's a '.services' element, apply staggered delay
-            if (target.classList.contains('services')) {
-                if (window.innerWidth > 1761) {
-                const index = Array.from(target.parentNode.children).indexOf(target);
-                const totalElements = target.parentNode.children.length;
-                const reverseIndex = totalElements - 1 - index; // Reverse the index
-                target.style.transitionDelay = `${reverseIndex * 150}ms`; 
-                target.classList.add('show');
-                }
-            } 
+            
             // Handle other elements with 'hidden' and 'hidden2'
-            else if (target.classList.contains('hidden')) {
+             if (target.classList.contains('hidden')) {
                 target.classList.add('show');
             } else if (target.classList.contains('hidden2')) {
                 target.classList.add('show2');
